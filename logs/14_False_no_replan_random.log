@@ -1,0 +1,1507 @@
+Attaching to planning_environment_1, planning_planner_1, planning_nurse_1, planning_arm_1, planning_robot_1, planning_coordinator_1
+[32menvironment_1  |[0m [INFO] [1675200586.456344224] [Environment]: Starting Environment server
+[32menvironment_1  |[0m [INFO] [1675200586.523267048] [Environment]: Environment server started
+[35mnurse_1        |[0m [INFO] [1675200587.516766728] [Nurse]: Starting Nurse server
+[35mnurse_1        |[0m [INFO] [1675200587.546059016] [Nurse]: Nurse server started
+[35mnurse_1        |[0m [INFO] [1675200587.560897171] [Nurse]: Starting Nurse clients
+[33mcoordinator_1  |[0m [INFO] [1675200588.279824941] [Coordinator]: Starting Coordinator server
+[33mcoordinator_1  |[0m [INFO] [1675200588.370505363] [Coordinator]: Coordinator server started
+[33mcoordinator_1  |[0m [INFO] [1675200588.384768922] [Coordinator]: Starting Coordinator clients
+[36marm_1          |[0m [INFO] [1675200588.402669281] [Arm]: Starting Arm server
+[36marm_1          |[0m [INFO] [1675200588.426437293] [Arm]: Arm server started
+[36marm_1          |[0m [INFO] [1675200588.428208625] [Arm]: Starting Nurse clients
+[36;1mrobot_1        |[0m [INFO] [1675200588.790726554] [Robot]: Starting Robot server
+[36;1mrobot_1        |[0m [INFO] [1675200588.826553326] [Robot]: Robot server started
+[36;1mrobot_1        |[0m [INFO] [1675200588.827569937] [Robot]: Starting Robots clients
+[36;1mrobot_1        |[0m [INFO] [1675200588.862003790] [Robot]: Robots clients started
+[35mnurse_1        |[0m [INFO] [1675200588.891017637] [Nurse]: Nurse clients started
+[35mnurse_1        |[0m [INFO] [1675200588.902212996] [Nurse]: Sent request
+[36marm_1          |[0m [INFO] [1675200588.955924040] [Arm]: Nurse clients started
+[33mcoordinator_1  |[0m [INFO] [1675200589.439138173] [Coordinator]: planner sync service not available, waiting again...
+[33mcoordinator_1  |[0m [INFO] [1675200590.476507292] [Coordinator]: planner sync service not available, waiting again...
+[33mcoordinator_1  |[0m [INFO] [1675200591.505674368] [Coordinator]: planner sync service not available, waiting again...
+[33mcoordinator_1  |[0m [INFO] [1675200592.514284544] [Coordinator]: planner sync service not available, waiting again...
+[33mcoordinator_1  |[0m [INFO] [1675200593.560439563] [Coordinator]: planner sync service not available, waiting again...
+[34mplanner_1      |[0m [INFO] [1675200594.311007363] [Planner]: Starting Planner server
+[34mplanner_1      |[0m [INFO] [1675200594.350371871] [Planner]: Planner server started
+[33mcoordinator_1  |[0m [INFO] [1675200594.655327856] [Coordinator]: Coordinator clients started
+[33mcoordinator_1  |[0m [INFO] [1675200594.736397597] [Coordinator]: Receiving message of nurse1 in room3.
+[33mcoordinator_1  |[0m [INFO] [1675200594.739054682] [Coordinator]: Sending response
+[33mcoordinator_1  |[0m [INFO] [1675200594.753017278] [Coordinator]: Planing
+[35mnurse_1        |[0m [INFO] [1675200594.761155698] [Nurse]: Request response:Okay!
+[33mcoordinator_1  |[0m [INFO] [1675200594.762058012] [Coordinator]: Creating plan for: robot1, nurse1, arm1 
+[34mplanner_1      |[0m [INFO] [1675200594.765606877] [Planner]: Receiving sync message. need_plan,robot1,nurse1,arm1
+[34mplanner_1      |[0m [INFO] [1675200594.767394917] [Planner]: Creating plan for: robot1 robot1 nurse1
+[34mplanner_1      |[0m [INFO] [1675200594.777984296] [Planner]: a_navto,robot1,Room1
+[34mplanner_1      |[0m [INFO] [1675200594.779229620] [Planner]: a_approach_nurse,robot1
+[34mplanner_1      |[0m [INFO] [1675200594.780665571] [Planner]: a_authenticate_nurse,robot1,nurse1
+[34mplanner_1      |[0m [INFO] [1675200594.782071148] [Planner]: a_open_drawer,robot1
+[34mplanner_1      |[0m [INFO] [1675200594.783493854] [Planner]: a_deposit,nurse1,robot1
+[34mplanner_1      |[0m [INFO] [1675200594.786070776] [Planner]: a_close_drawer,robot1
+[34mplanner_1      |[0m [INFO] [1675200594.789895921] [Planner]: a_navto,robot1,Room3
+[34mplanner_1      |[0m [INFO] [1675200594.801678077] [Planner]: a_approach_arm,robot1,arm1
+[34mplanner_1      |[0m [INFO] [1675200594.803805222] [Planner]: a_open_drawer,robot1
+[34mplanner_1      |[0m [INFO] [1675200594.805432224] [Planner]: a_pick_up_sample,arm1,robot1
+[34mplanner_1      |[0m [INFO] [1675200594.807137592] [Planner]: a_close_drawer,robot1
+[34mplanner_1      |[0m [INFO] [1675200594.808725539] [Planner]: Sending response
+[33mcoordinator_1  |[0m [INFO] [1675200594.823442021] [Coordinator]: Plan received for: robot1, nurse1, arm1 
+[33mcoordinator_1  |[0m [INFO] [1675200594.825194155] [Coordinator]: a_navto,robot1,Room1/a_approach_nurse,robot1/a_authenticate_nurse,robot1,nurse1/a_open_drawer,robot1/a_deposit,nurse1,robot1/a_close_drawer,robot1/a_navto,robot1,Room3/a_approach_arm,robot1,arm1/a_open_drawer,robot1/a_pick_up_sample,arm1,robot1/a_close_drawer,robot1
+[33mcoordinator_1  |[0m [INFO] [1675200594.826548179] [Coordinator]: a_navto,robot1,Room1
+[33mcoordinator_1  |[0m [INFO] [1675200594.827626811] [Coordinator]: a_approach_nurse,robot1
+[33mcoordinator_1  |[0m [INFO] [1675200594.843204831] [Coordinator]: a_authenticate_nurse,robot1,nurse1
+[33mcoordinator_1  |[0m [INFO] [1675200594.858639884] [Coordinator]: a_open_drawer,robot1
+[33mcoordinator_1  |[0m [INFO] [1675200594.860568572] [Coordinator]: a_deposit,nurse1,robot1
+[33mcoordinator_1  |[0m [INFO] [1675200594.874087287] [Coordinator]: a_close_drawer,robot1
+[33mcoordinator_1  |[0m [INFO] [1675200594.876420016] [Coordinator]: a_navto,robot1,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200594.889574584] [Coordinator]: a_approach_arm,robot1,arm1
+[33mcoordinator_1  |[0m [INFO] [1675200594.890916275] [Coordinator]: a_open_drawer,robot1
+[33mcoordinator_1  |[0m [INFO] [1675200594.891950241] [Coordinator]: a_pick_up_sample,arm1,robot1
+[33mcoordinator_1  |[0m [INFO] [1675200594.893219286] [Coordinator]: a_close_drawer,robot1
+[33mcoordinator_1  |[0m [INFO] [1675200594.894246850] [Coordinator]: Sending plans
+[33mcoordinator_1  |[0m [INFO] [1675200594.908592766] [Coordinator]: Plans sent
+[36marm_1          |[0m [INFO] [1675200594.920352825] [Arm]: Receiving message.
+[36marm_1          |[0m [INFO] [1675200594.924894509] [Arm]: Arm's actions:
+[35mnurse_1        |[0m [INFO] [1675200594.920168605] [Nurse]: Receiving message.
+[36marm_1          |[0m [INFO] [1675200594.961339877] [Arm]: Action: a_approach_arm
+[36marm_1          |[0m [INFO] [1675200594.964164310] [Arm]: Doing a_approach_arm
+[36;1mrobot_1        |[0m [INFO] [1675200594.932189584] [Robot]: Receiving message.
+[36;1mrobot_1        |[0m [INFO] [1675200594.947573850] [Robot]: Robot's actions:
+[36;1mrobot_1        |[0m [INFO] [1675200594.966897847] [Robot]: Action: a_navto
+[35mnurse_1        |[0m [INFO] [1675200594.968785030] [Nurse]: Nurse's actions:
+[35mnurse_1        |[0m [INFO] [1675200594.970622226] [Nurse]: a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200594.973663583] [Nurse]: Action: a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200594.975999835] [Nurse]: Doing a_authenticate_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200594.984600883] [Robot]: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200594.985926421] [Robot]: a_authenticate_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200594.987010753] [Robot]: a_open_drawer
+[36;1mrobot_1        |[0m [INFO] [1675200594.988309311] [Robot]: a_deposit
+[36;1mrobot_1        |[0m [INFO] [1675200594.989347752] [Robot]: a_close_drawer
+[35mnurse_1        |[0m [INFO] [1675200594.995631929] [Nurse]: a_deposit
+[36marm_1          |[0m [INFO] [1675200594.977622479] [Arm]: a_approach_arm
+[36;1mrobot_1        |[0m [INFO] [1675200594.995746833] [Robot]: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200594.997502287] [Robot]: a_approach_arm
+[36;1mrobot_1        |[0m [INFO] [1675200595.001926933] [Robot]: a_open_drawer
+[36;1mrobot_1        |[0m [INFO] [1675200595.005103944] [Robot]: a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200595.013117507] [Robot]: a_close_drawer
+[36;1mrobot_1        |[0m [INFO] [1675200595.023438105] [Robot]: Receiving sync message. a_authenticate_nurse,robot1,nurse1
+[36;1mrobot_1        |[0m [INFO] [1675200595.026194491] [Robot]: Doing a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200595.036119152] [Robot]: not ready
+[35mnurse_1        |[0m [INFO] [1675200595.042028666] [Nurse]: not ready
+[32menvironment_1  |[0m [INFO] [1675200595.043706663] [Environment]: Receiving message: a_approach_arm,robot1,arm1
+[35mnurse_1        |[0m [INFO] [1675200595.045677433] [Nurse]: Action result: False
+[32menvironment_1  |[0m [INFO] [1675200595.077784630] [Environment]: Action: a_approach_arm
+[35mnurse_1        |[0m [INFO] [1675200595.060810234] [Nurse]: Action: a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200595.074883294] [Nurse]: Doing a_authenticate_nurse
+[32menvironment_1  |[0m [INFO] [1675200595.078952842] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200595.080194072] [Robot]: Receiving sync message. a_authenticate_nurse,robot1,nurse1
+[36;1mrobot_1        |[0m [INFO] [1675200595.086070248] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200595.085016586] [Arm]: success
+[36marm_1          |[0m [INFO] [1675200595.086383656] [Arm]: Action result: True
+[36marm_1          |[0m [INFO] [1675200595.087883196] [Arm]: Action: a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200595.103126998] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200595.115582820] [Robot]: not ready
+[32menvironment_1  |[0m [INFO] [1675200595.118615577] [Environment]: Receiving message: a_navto,robot1,Room1
+[36marm_1          |[0m [INFO] [1675200595.089328247] [Arm]: Doing a_pick_up_sample
+[35mnurse_1        |[0m [INFO] [1675200595.104675573] [Nurse]: not ready
+[35mnurse_1        |[0m [INFO] [1675200595.107779079] [Nurse]: Action result: False
+[36marm_1          |[0m [INFO] [1675200595.119975930] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200595.121597181] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200595.123093824] [Arm]: Action: a_pick_up_sample
+[35mnurse_1        |[0m [INFO] [1675200595.124251620] [Nurse]: Action: a_authenticate_nurse
+[36marm_1          |[0m [INFO] [1675200595.124423061] [Arm]: Doing a_pick_up_sample
+[32menvironment_1  |[0m [INFO] [1675200595.127955076] [Environment]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200595.127977385] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200595.130299395] [Robot]: not ready
+[35mnurse_1        |[0m [INFO] [1675200595.138169007] [Nurse]: Doing a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200595.163127150] [Nurse]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200595.146074265] [Robot]: Receiving sync message. a_authenticate_nurse,robot1,nurse1
+[36;1mrobot_1        |[0m [INFO] [1675200595.159821179] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200595.169149907] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200595.170281960] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200595.175001294] [Robot]: success
+[32menvironment_1  |[0m [INFO] [1675200595.150864756] [Environment]: Responding
+[36marm_1          |[0m [INFO] [1675200595.154436586] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200595.155768453] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200595.157019116] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200595.158523252] [Arm]: Doing a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200595.175768761] [Arm]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200595.176133521] [Robot]: Action result: True
+[35mnurse_1        |[0m [INFO] [1675200595.178826525] [Nurse]: Action result: False
+[35mnurse_1        |[0m [INFO] [1675200595.181263497] [Nurse]: Action: a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200595.195746586] [Nurse]: Doing a_authenticate_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200595.206889141] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200595.208344730] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200595.211208593] [Robot]: Receiving sync message. a_authenticate_nurse,robot1,nurse1
+[36;1mrobot_1        |[0m [INFO] [1675200595.212691394] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200595.178692064] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200595.188924142] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200595.192798899] [Arm]: Doing a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200595.230443283] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200595.242629759] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200595.244557287] [Arm]: Action: a_pick_up_sample
+[33mcoordinator_1  |[0m [INFO] [1675200595.243565550] [Coordinator]: Receiving sync message: action_complete,a_navto
+[36marm_1          |[0m [INFO] [1675200595.245988947] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200595.254900069] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[35mnurse_1        |[0m [INFO] [1675200595.245977513] [Nurse]: not ready
+[35mnurse_1        |[0m [INFO] [1675200595.288950211] [Nurse]: Action result: False
+[35mnurse_1        |[0m [INFO] [1675200595.295721263] [Nurse]: Action: a_authenticate_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200595.277116164] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200595.301304001] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200595.303741845] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200595.318494688] [Arm]: Action: a_pick_up_sample
+[35mnurse_1        |[0m [INFO] [1675200595.316395775] [Nurse]: Doing a_authenticate_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200595.320473054] [Robot]: Receiving sync message. a_authenticate_nurse,robot1,nurse1
+[36marm_1          |[0m [INFO] [1675200595.333250012] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200595.335567248] [Robot]: not ready
+[35mnurse_1        |[0m [INFO] [1675200595.341631053] [Nurse]: not ready
+[33mcoordinator_1  |[0m [INFO] [1675200595.349757558] [Coordinator]: action_complete
+[36;1mrobot_1        |[0m [INFO] [1675200595.351774854] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200595.355964044] [Robot]: not ready
+[33mcoordinator_1  |[0m [INFO] [1675200595.352217439] [Coordinator]: plans_actions_current 1 of 11
+[35mnurse_1        |[0m [INFO] [1675200595.353364317] [Nurse]: Action result: False
+[35mnurse_1        |[0m [INFO] [1675200595.354846120] [Nurse]: Action: a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200595.356373965] [Nurse]: Doing a_authenticate_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200595.373863281] [Robot]: Receiving sync message. a_authenticate_nurse,robot1,nurse1
+[36;1mrobot_1        |[0m [INFO] [1675200595.386550353] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200595.384241988] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200595.386638994] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200595.389302860] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200595.390439388] [Arm]: Doing a_pick_up_sample
+[35mnurse_1        |[0m [INFO] [1675200595.401662312] [Nurse]: not ready
+[35mnurse_1        |[0m [INFO] [1675200595.405135394] [Nurse]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200595.404184222] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200595.418658588] [Robot]: Action: a_approach_nurse
+[35mnurse_1        |[0m [INFO] [1675200595.419680862] [Nurse]: Action: a_authenticate_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200595.421716571] [Robot]: Doing a_approach_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200595.435494218] [Robot]: not ready
+[35mnurse_1        |[0m [INFO] [1675200595.434384994] [Nurse]: Doing a_authenticate_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200595.453286630] [Robot]: Receiving sync message. a_authenticate_nurse,robot1,nurse1
+[32menvironment_1  |[0m [INFO] [1675200595.447473426] [Environment]: Receiving message: a_approach_nurse,robot1
+[32menvironment_1  |[0m [INFO] [1675200595.449818099] [Environment]: Action: a_approach_nurse
+[32menvironment_1  |[0m [INFO] [1675200595.451602920] [Environment]: Responding
+[36marm_1          |[0m [INFO] [1675200595.454330721] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200595.456992666] [Arm]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200595.458776665] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200595.471654385] [Arm]: Action: a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200595.470292062] [Robot]: success
+[36;1mrobot_1        |[0m [INFO] [1675200595.474407975] [Robot]: Action result: True
+[36marm_1          |[0m [INFO] [1675200595.484698975] [Arm]: Doing a_pick_up_sample
+[35mnurse_1        |[0m [INFO] [1675200595.486741152] [Nurse]: not ready
+[35mnurse_1        |[0m [INFO] [1675200595.488454169] [Nurse]: Action result: False
+[35mnurse_1        |[0m [INFO] [1675200595.490214083] [Nurse]: Action: a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200595.491896183] [Nurse]: Doing a_authenticate_nurse
+[33mcoordinator_1  |[0m [INFO] [1675200595.502532834] [Coordinator]: Receiving sync message: action_complete,a_approach_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200595.502593227] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[33mcoordinator_1  |[0m [INFO] [1675200595.504132110] [Coordinator]: action_complete
+[36;1mrobot_1        |[0m [INFO] [1675200595.506620638] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200595.508975539] [Robot]: Receiving sync message. a_authenticate_nurse,robot1,nurse1
+[36;1mrobot_1        |[0m [INFO] [1675200595.510835741] [Robot]: not ready
+[33mcoordinator_1  |[0m [INFO] [1675200595.517827938] [Coordinator]: plans_actions_current 2 of 11
+[36marm_1          |[0m [INFO] [1675200595.513438905] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200595.524737923] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200595.528232592] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200595.531207171] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200595.544109980] [Robot]: Action: a_authenticate_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200595.546922494] [Robot]: Doing a_authenticate_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200595.560863719] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200595.565058277] [Robot]: wating for nurse1 to authenticate to robot1
+[35mnurse_1        |[0m [INFO] [1675200595.535771118] [Nurse]: not ready
+[35mnurse_1        |[0m [INFO] [1675200595.564382314] [Nurse]: Action result: False
+[35mnurse_1        |[0m [INFO] [1675200595.565327205] [Nurse]: Action: a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200595.566206810] [Nurse]: Doing a_authenticate_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200595.578630684] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200595.586709466] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200595.591313483] [Robot]: Receiving sync message. a_authenticate_nurse,robot1,nurse1
+[36marm_1          |[0m [INFO] [1675200595.591705694] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200595.597370122] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200595.600656237] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200595.614192131] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200595.605452425] [Robot]: Action: a_authenticate_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200595.621129065] [Robot]: Authenticate nurse
+[35mnurse_1        |[0m [INFO] [1675200595.638174710] [Nurse]: success
+[36;1mrobot_1        |[0m [INFO] [1675200595.648990768] [Robot]: Doing a_authenticate_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200595.663017506] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[35mnurse_1        |[0m [INFO] [1675200595.654220620] [Nurse]: Action result: True
+[35mnurse_1        |[0m [INFO] [1675200595.668859472] [Nurse]: Action: a_deposit
+[35mnurse_1        |[0m [INFO] [1675200595.672193263] [Nurse]: Doing a_deposit
+[36;1mrobot_1        |[0m [INFO] [1675200595.671794340] [Robot]: Action result: True
+[36;1mrobot_1        |[0m [INFO] [1675200595.696390419] [Robot]: not ready
+[33mcoordinator_1  |[0m [INFO] [1675200595.710999898] [Coordinator]: Receiving sync message: action_complete,a_authenticate_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200595.712280627] [Robot]: Receiving sync message. a_deposit,nurse1,robot1
+[36marm_1          |[0m [INFO] [1675200595.712541768] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200595.714070899] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200595.715741685] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200595.717371801] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200595.720465498] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200595.723511832] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200595.724927404] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200595.733331442] [Arm]: not ready
+[35mnurse_1        |[0m [INFO] [1675200595.736191075] [Nurse]: not ready
+[35mnurse_1        |[0m [INFO] [1675200595.741564465] [Nurse]: Action result: False
+[35mnurse_1        |[0m [INFO] [1675200595.744369886] [Nurse]: Action: a_deposit
+[36marm_1          |[0m [INFO] [1675200595.742573072] [Arm]: Action result: False
+[35mnurse_1        |[0m [INFO] [1675200595.746231247] [Nurse]: Doing a_deposit
+[36;1mrobot_1        |[0m [INFO] [1675200595.749914250] [Robot]: Receiving sync message. a_deposit,nurse1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200595.752134608] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200595.755483332] [Arm]: Action: a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200595.782966959] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36marm_1          |[0m [INFO] [1675200595.763435343] [Arm]: Doing a_pick_up_sample
+[33mcoordinator_1  |[0m [INFO] [1675200595.776025468] [Coordinator]: action_complete
+[33mcoordinator_1  |[0m [INFO] [1675200595.778781750] [Coordinator]: plans_actions_current 3 of 11
+[35mnurse_1        |[0m [INFO] [1675200595.785698590] [Nurse]: not ready
+[35mnurse_1        |[0m [INFO] [1675200595.797507903] [Nurse]: Action result: False
+[35mnurse_1        |[0m [INFO] [1675200595.800394571] [Nurse]: Action: a_deposit
+[36;1mrobot_1        |[0m [INFO] [1675200595.797111669] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200595.800830331] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200595.801810821] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200595.802688100] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200595.803556862] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200595.802767298] [Robot]: Action: a_open_drawer
+[35mnurse_1        |[0m [INFO] [1675200595.813255987] [Nurse]: Doing a_deposit
+[36;1mrobot_1        |[0m [INFO] [1675200595.816899512] [Robot]: Doing a_open_drawer
+[36;1mrobot_1        |[0m [INFO] [1675200595.834438408] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36marm_1          |[0m [INFO] [1675200595.854450449] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200595.856603466] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200595.858380092] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200595.859889644] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200595.837681449] [Robot]: success
+[36;1mrobot_1        |[0m [INFO] [1675200595.849831583] [Robot]: Action result: True
+[36;1mrobot_1        |[0m [INFO] [1675200595.851598491] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200595.861617149] [Robot]: Receiving sync message. a_deposit,nurse1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200595.862891600] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200595.864926960] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200595.866163989] [Robot]: not ready
+[35mnurse_1        |[0m [INFO] [1675200595.871599921] [Nurse]: not ready
+[35mnurse_1        |[0m [INFO] [1675200595.884004370] [Nurse]: Action result: False
+[36marm_1          |[0m [INFO] [1675200595.885045673] [Arm]: not ready
+[35mnurse_1        |[0m [INFO] [1675200595.893629606] [Nurse]: Action: a_deposit
+[36marm_1          |[0m [INFO] [1675200595.889989411] [Arm]: Action result: False
+[35mnurse_1        |[0m [INFO] [1675200595.898609895] [Nurse]: Doing a_deposit
+[36;1mrobot_1        |[0m [INFO] [1675200595.901127018] [Robot]: Receiving sync message. a_deposit,nurse1,robot1
+[36marm_1          |[0m [INFO] [1675200595.905352983] [Arm]: Action: a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200595.902648033] [Robot]: not ready
+[33mcoordinator_1  |[0m [INFO] [1675200595.903897197] [Coordinator]: Receiving sync message: action_complete,a_open_drawer
+[33mcoordinator_1  |[0m [INFO] [1675200595.906759981] [Coordinator]: action_complete
+[36marm_1          |[0m [INFO] [1675200595.908621993] [Arm]: Doing a_pick_up_sample
+[35mnurse_1        |[0m [INFO] [1675200595.909984845] [Nurse]: not ready
+[35mnurse_1        |[0m [INFO] [1675200595.911352836] [Nurse]: Action result: False
+[33mcoordinator_1  |[0m [INFO] [1675200595.920120178] [Coordinator]: plans_actions_current 4 of 11
+[35mnurse_1        |[0m [INFO] [1675200595.920872672] [Nurse]: Action: a_deposit
+[35mnurse_1        |[0m [INFO] [1675200595.923729175] [Nurse]: Doing a_deposit
+[36;1mrobot_1        |[0m [INFO] [1675200595.929770606] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200595.931370603] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200595.938830577] [Robot]: Receiving sync message. a_deposit,nurse1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200595.954201505] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200595.941442093] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200595.943968939] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200595.958398187] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200595.960504025] [Arm]: Doing a_pick_up_sample
+[35mnurse_1        |[0m [INFO] [1675200595.967909822] [Nurse]: not ready
+[35mnurse_1        |[0m [INFO] [1675200595.971248090] [Nurse]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200595.974778814] [Robot]: Action: a_deposit
+[35mnurse_1        |[0m [INFO] [1675200595.984995955] [Nurse]: Action: a_deposit
+[35mnurse_1        |[0m [INFO] [1675200595.988130086] [Nurse]: Doing a_deposit
+[36;1mrobot_1        |[0m [INFO] [1675200595.986800691] [Robot]: Doing a_deposit
+[36;1mrobot_1        |[0m [INFO] [1675200596.016109598] [Robot]: wating for nurse1 to deposit in robot1
+[36;1mrobot_1        |[0m [INFO] [1675200596.027698188] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200596.030401834] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200596.033716936] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200596.043933021] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200596.046714675] [Arm]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200596.049968810] [Robot]: Receiving sync message. a_deposit,nurse1,robot1
+[36marm_1          |[0m [INFO] [1675200596.049353738] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200596.064131073] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200596.053016906] [Robot]: Action: a_deposit
+[36;1mrobot_1        |[0m [INFO] [1675200596.068435417] [Robot]: Deposit
+[35mnurse_1        |[0m [INFO] [1675200596.074381853] [Nurse]: success
+[35mnurse_1        |[0m [INFO] [1675200596.089179390] [Nurse]: Action result: True
+[36;1mrobot_1        |[0m [INFO] [1675200596.092106188] [Robot]: Doing a_deposit
+[36;1mrobot_1        |[0m [INFO] [1675200596.113839716] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200596.117850173] [Robot]: Action result: True
+[36;1mrobot_1        |[0m [INFO] [1675200596.121533162] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200596.126246453] [Arm]: not ready
+[33mcoordinator_1  |[0m [INFO] [1675200596.132835925] [Coordinator]: Receiving sync message: action_complete,a_deposit
+[33mcoordinator_1  |[0m [INFO] [1675200596.135648206] [Coordinator]: action_complete
+[36marm_1          |[0m [INFO] [1675200596.129210756] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200596.143438350] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200596.154130370] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200596.167571330] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200596.170547160] [Robot]: not ready
+[33mcoordinator_1  |[0m [INFO] [1675200596.184764693] [Coordinator]: plans_actions_current 5 of 11
+[36marm_1          |[0m [INFO] [1675200596.195262468] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200596.200388813] [Arm]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200596.191942816] [Robot]: Action: a_close_drawer
+[36;1mrobot_1        |[0m [INFO] [1675200596.204596810] [Robot]: Doing a_close_drawer
+[36marm_1          |[0m [INFO] [1675200596.203322273] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200596.216404095] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200596.219522649] [Robot]: success
+[36;1mrobot_1        |[0m [INFO] [1675200596.224341391] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200596.235235788] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200596.238403646] [Robot]: Action result: True
+[36marm_1          |[0m [INFO] [1675200596.240280469] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200596.243228007] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200596.259120623] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200596.269941634] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200596.274689772] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200596.288251483] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200596.295598779] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200596.298313610] [Arm]: Action result: False
+[33mcoordinator_1  |[0m [INFO] [1675200596.305356472] [Coordinator]: Receiving sync message: action_complete,a_close_drawer
+[36marm_1          |[0m [INFO] [1675200596.312512835] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200596.324553916] [Arm]: Doing a_pick_up_sample
+[33mcoordinator_1  |[0m [INFO] [1675200596.327097619] [Coordinator]: action_complete
+[33mcoordinator_1  |[0m [INFO] [1675200596.328246601] [Coordinator]: plans_actions_current 6 of 11
+[36;1mrobot_1        |[0m [INFO] [1675200596.331056434] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200596.341223801] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200596.347439854] [Arm]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200596.348360621] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200596.350565866] [Robot]: Doing a_navto
+[36marm_1          |[0m [INFO] [1675200596.351207736] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200596.357882544] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200596.359674526] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200596.365666436] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200596.368029851] [Robot]: not ready
+[32menvironment_1  |[0m [INFO] [1675200596.378601790] [Environment]: Receiving message: a_navto,robot1,Room3
+[36marm_1          |[0m [INFO] [1675200596.382526733] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200596.385097937] [Arm]: Action result: False
+[32menvironment_1  |[0m [INFO] [1675200596.384250366] [Environment]: Action: a_navto
+[36marm_1          |[0m [INFO] [1675200596.387524182] [Arm]: Action: a_pick_up_sample
+[32menvironment_1  |[0m [INFO] [1675200596.387510394] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200596.404537364] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36marm_1          |[0m [INFO] [1675200596.400537561] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200596.410611051] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200596.428683539] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200596.430252090] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200596.431704359] [Arm]: Action: a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200596.422121720] [Robot]: door closed
+[36;1mrobot_1        |[0m [INFO] [1675200596.437585992] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36marm_1          |[0m [INFO] [1675200596.433005877] [Arm]: Doing a_pick_up_sample
+[33mcoordinator_1  |[0m [INFO] [1675200596.448880989] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200596.449861692] [Coordinator]: door_closed
+[36;1mrobot_1        |[0m [INFO] [1675200596.446496816] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200596.452527759] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200596.455124028] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200596.457492126] [Arm]: Action: a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200596.462057380] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200596.463133792] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200596.464011623] [Robot]: Doing a_navto
+[36marm_1          |[0m [INFO] [1675200596.471788026] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200596.480732803] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[32menvironment_1  |[0m [INFO] [1675200596.484213406] [Environment]: Receiving message: a_navto,robot1,Room3
+[36;1mrobot_1        |[0m [INFO] [1675200596.486880962] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200596.494068610] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200596.496820147] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200596.507696061] [Arm]: Action: a_pick_up_sample
+[32menvironment_1  |[0m [INFO] [1675200596.509477133] [Environment]: Action: a_navto
+[36marm_1          |[0m [INFO] [1675200596.513937054] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200596.519252125] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200596.522956435] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200596.530161965] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200596.531357776] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200596.532621070] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200596.534499247] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200596.539054028] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200596.541730913] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200596.550035536] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200596.552698179] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200596.555270280] [Arm]: Action: a_pick_up_sample
+[32menvironment_1  |[0m [INFO] [1675200596.555267072] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200596.559910020] [Robot]: door closed
+[36marm_1          |[0m [INFO] [1675200596.566755966] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200596.573745671] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200596.577164039] [Robot]: not ready
+[33mcoordinator_1  |[0m [INFO] [1675200596.577757769] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200596.581575168] [Coordinator]: door_closed
+[36marm_1          |[0m [INFO] [1675200596.588845688] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200596.591082030] [Arm]: Action result: False
+[33mcoordinator_1  |[0m [INFO] [1675200596.594893956] [Coordinator]: The time of execution of above program is : 1901.4837741851807 ms
+[33mcoordinator_1  |[0m [INFO] [1675200596.596815959] [Coordinator]: Failed
+[36marm_1          |[0m [INFO] [1675200596.599335902] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200596.601006729] [Arm]: Doing a_pick_up_sample
+[33mcoordinator_1  |[0m [INFO] [1675200596.605926138] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200596.617534431] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200596.621231210] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200596.632152914] [Arm]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200596.641095779] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200596.657678637] [Robot]: Action: a_navto
+[36marm_1          |[0m [INFO] [1675200596.646052036] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200596.662210327] [Arm]: Action: a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200596.673546700] [Robot]: Doing a_navto
+[36marm_1          |[0m [INFO] [1675200596.677785385] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200596.706003279] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[32menvironment_1  |[0m [INFO] [1675200596.709192937] [Environment]: Receiving message: a_navto,robot1,Room3
+[36;1mrobot_1        |[0m [INFO] [1675200596.721256253] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200596.760740329] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200596.763477767] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200596.780769397] [Robot]: door closed
+[36;1mrobot_1        |[0m [INFO] [1675200596.809678813] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200596.812331887] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200596.872689897] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200596.875338485] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200596.750545934] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200596.753043799] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200596.754716747] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200596.756593847] [Arm]: Doing a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200596.774624880] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200596.798778366] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200596.799924240] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200596.800946706] [Arm]: Doing a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200596.821457104] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200596.836409090] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200596.852511108] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200596.868516811] [Arm]: Doing a_pick_up_sample
+[32menvironment_1  |[0m [INFO] [1675200596.711439583] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200596.767899147] [Environment]: Responding
+[36marm_1          |[0m [INFO] [1675200596.886005523] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200596.901372437] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200596.915750201] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200596.931094806] [Arm]: Doing a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200596.987941365] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200597.002585111] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200597.005227921] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200597.019507094] [Arm]: Doing a_pick_up_sample
+[33mcoordinator_1  |[0m [INFO] [1675200596.903899649] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200596.976662717] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200596.985018674] [Coordinator]: The time of execution of above program is : 2296.6341972351074 ms
+[33mcoordinator_1  |[0m [INFO] [1675200596.987272094] [Coordinator]: Failed
+[36;1mrobot_1        |[0m [INFO] [1675200596.944763967] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200596.961324079] [Robot]: not ready
+[33mcoordinator_1  |[0m [INFO] [1675200597.014841337] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200597.023134110] [Robot]: Action result: False
+[36marm_1          |[0m [INFO] [1675200597.090334812] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200597.106099512] [Arm]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200597.054920671] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200597.068734199] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200597.073143070] [Robot]: not ready
+[33mcoordinator_1  |[0m [INFO] [1675200597.185792192] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[36marm_1          |[0m [INFO] [1675200597.118970995] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200597.120094829] [Arm]: Doing a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200597.131593727] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200597.142222381] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200597.144397791] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200597.146031549] [Arm]: Doing a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200597.178008285] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200597.192717050] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200597.194376830] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200597.196106145] [Arm]: Doing a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200597.214655947] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200597.220675818] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200597.223967644] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200597.234837263] [Arm]: Doing a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200597.261786827] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200597.277384966] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200597.279843758] [Arm]: Action: a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200597.085282221] [Robot]: Doing a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200597.109029448] [Robot]: door closed
+[36;1mrobot_1        |[0m [INFO] [1675200597.123861734] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200597.125706010] [Robot]: not ready
+[32menvironment_1  |[0m [INFO] [1675200597.099020443] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200597.100263108] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200597.101262624] [Environment]: Responding
+[36marm_1          |[0m [INFO] [1675200597.282621024] [Arm]: Doing a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200597.325799900] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200597.336440060] [Arm]: Action result: False
+[33mcoordinator_1  |[0m [INFO] [1675200597.282488525] [Coordinator]: door_closed
+[36marm_1          |[0m [INFO] [1675200597.338178025] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200597.339249897] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200597.149835435] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[33mcoordinator_1  |[0m [INFO] [1675200597.299780187] [Coordinator]: The time of execution of above program is : 2602.9052734375 ms
+[36;1mrobot_1        |[0m [INFO] [1675200597.164606531] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200597.199145447] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200597.200956235] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200597.239424939] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200597.249303253] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200597.302781726] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200597.309550825] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200597.341287961] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200597.342575776] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200597.377126551] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200597.380657836] [Arm]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200597.396272129] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36marm_1          |[0m [INFO] [1675200597.384372624] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200597.393971637] [Arm]: Doing a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200597.403556484] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200597.406824779] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200597.417355341] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200597.426360235] [Arm]: Doing a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200597.440198607] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200597.451842548] [Arm]: Action result: False
+[33mcoordinator_1  |[0m [INFO] [1675200597.446688454] [Coordinator]: Failed
+[36marm_1          |[0m [INFO] [1675200597.452911130] [Arm]: Action: a_pick_up_sample
+[33mcoordinator_1  |[0m [INFO] [1675200597.450296615] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200597.398016768] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200597.453810317] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200597.429711634] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200597.431604265] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200597.502161202] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200597.515382395] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200597.528679606] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200597.529994277] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200597.549963588] [Arm]: not ready
+[32menvironment_1  |[0m [INFO] [1675200597.547647706] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200597.571467125] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200597.573847659] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200597.537822359] [Robot]: Doing a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200597.590068124] [Robot]: door closed
+[36;1mrobot_1        |[0m [INFO] [1675200597.633742573] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36marm_1          |[0m [INFO] [1675200597.567713858] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200597.598176095] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200597.614612879] [Arm]: Doing a_pick_up_sample
+[33mcoordinator_1  |[0m [INFO] [1675200597.607248959] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[36;1mrobot_1        |[0m [INFO] [1675200597.649603031] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200597.682996141] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200597.699427245] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200597.701888213] [Arm]: Action: a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200597.708423710] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36marm_1          |[0m [INFO] [1675200597.704119774] [Arm]: Doing a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200597.740598797] [Arm]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200597.722750518] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200597.743175454] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200597.757398366] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200597.759856102] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200597.793329001] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200597.809960217] [Robot]: not ready
+[33mcoordinator_1  |[0m [INFO] [1675200597.812717201] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200597.815232245] [Coordinator]: The time of execution of above program is : 3132.680892944336 ms
+[36marm_1          |[0m [INFO] [1675200597.815678766] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200597.829689852] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200597.843438716] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200597.845964554] [Arm]: Doing a_pick_up_sample
+[33mcoordinator_1  |[0m [INFO] [1675200597.846702663] [Coordinator]: Failed
+[36;1mrobot_1        |[0m [INFO] [1675200597.890105936] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200597.905109128] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200597.914251758] [Arm]: not ready
+[33mcoordinator_1  |[0m [INFO] [1675200597.918483029] [Coordinator]: ENDSIM
+[36marm_1          |[0m [INFO] [1675200597.928362459] [Arm]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200597.936716905] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200597.939069213] [Robot]: Action: a_navto
+[36marm_1          |[0m [INFO] [1675200597.942331616] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200597.943741810] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200597.955021375] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36marm_1          |[0m [INFO] [1675200597.967335070] [Arm]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200597.962427539] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200597.964714468] [Robot]: Doing a_navto
+[36marm_1          |[0m [INFO] [1675200597.983450583] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200597.999742727] [Arm]: Action: a_pick_up_sample
+[32menvironment_1  |[0m [INFO] [1675200597.990791978] [Environment]: Receiving message: a_navto,robot1,Room3
+[36marm_1          |[0m [INFO] [1675200598.014991635] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200598.020438008] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200598.033061965] [Robot]: not ready
+[32menvironment_1  |[0m [INFO] [1675200598.037162942] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200598.063352623] [Environment]: Responding
+[36marm_1          |[0m [INFO] [1675200598.078046435] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200598.093719482] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200598.094995877] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200598.096120010] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200598.081741171] [Robot]: door closed
+[36;1mrobot_1        |[0m [INFO] [1675200598.112260805] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200598.115420315] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200598.132570642] [Arm]: not ready
+[33mcoordinator_1  |[0m [INFO] [1675200598.121838623] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200598.124827628] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200598.140935327] [Coordinator]: The time of execution of above program is : 3444.9105262756348 ms
+[36marm_1          |[0m [INFO] [1675200598.149157253] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200598.164400984] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200598.179644564] [Arm]: Doing a_pick_up_sample
+[33mcoordinator_1  |[0m [INFO] [1675200598.198532434] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200598.201754513] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200598.207817908] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200598.210296019] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200598.225691047] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200598.226982865] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200598.228506232] [Robot]: Doing a_navto
+[36marm_1          |[0m [INFO] [1675200598.226890766] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200598.239798416] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200598.244056881] [Arm]: Action: a_pick_up_sample
+[32menvironment_1  |[0m [INFO] [1675200598.245712762] [Environment]: Receiving message: a_navto,robot1,Room3
+[36marm_1          |[0m [INFO] [1675200598.259743593] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200598.278727643] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200598.282182198] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200598.298661802] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200598.315468692] [Arm]: Action result: False
+[32menvironment_1  |[0m [INFO] [1675200598.313886940] [Environment]: Action: a_navto
+[36marm_1          |[0m [INFO] [1675200598.329171456] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200598.331932608] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200598.339786085] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[32menvironment_1  |[0m [INFO] [1675200598.340184014] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200598.361432459] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200598.366366762] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200598.367360807] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200598.368716825] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200598.369805619] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200598.371681138] [Robot]: door closed
+[36;1mrobot_1        |[0m [INFO] [1675200598.374847326] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200598.376792330] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200598.382087093] [Arm]: not ready
+[33mcoordinator_1  |[0m [INFO] [1675200598.392927423] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[36marm_1          |[0m [INFO] [1675200598.396246456] [Arm]: Action result: False
+[33mcoordinator_1  |[0m [INFO] [1675200598.401145882] [Coordinator]: door_closed
+[36marm_1          |[0m [INFO] [1675200598.410662372] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200598.413070880] [Arm]: Doing a_pick_up_sample
+[33mcoordinator_1  |[0m [INFO] [1675200598.448910082] [Coordinator]: The time of execution of above program is : 3721.238374710083 ms
+[36;1mrobot_1        |[0m [INFO] [1675200598.430891518] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200598.444411416] [Robot]: not ready
+[33mcoordinator_1  |[0m [INFO] [1675200598.452345565] [Coordinator]: Failed
+[36marm_1          |[0m [INFO] [1675200598.460607659] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200598.475430658] [Arm]: Action result: False
+[33mcoordinator_1  |[0m [INFO] [1675200598.497656423] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200598.510290489] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200598.524457146] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200598.540865487] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200598.556386554] [Robot]: Action: a_navto
+[36marm_1          |[0m [INFO] [1675200598.478549473] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200598.492623060] [Arm]: Doing a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200598.540020169] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200598.549245192] [Arm]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200598.570478234] [Robot]: Doing a_navto
+[36marm_1          |[0m [INFO] [1675200598.565470577] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200598.579659469] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200598.589842168] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[32menvironment_1  |[0m [INFO] [1675200598.603916023] [Environment]: Receiving message: a_navto,robot1,Room3
+[36;1mrobot_1        |[0m [INFO] [1675200598.603027830] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200598.641083722] [Arm]: not ready
+[32menvironment_1  |[0m [INFO] [1675200598.649691056] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200598.652396943] [Environment]: Responding
+[36marm_1          |[0m [INFO] [1675200598.644129011] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200598.659227321] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200598.676655775] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200598.677052209] [Robot]: door closed
+[36;1mrobot_1        |[0m [INFO] [1675200598.702716786] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200598.705853499] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200598.723443891] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200598.736886146] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200598.739869989] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200598.754763629] [Arm]: Doing a_pick_up_sample
+[33mcoordinator_1  |[0m [INFO] [1675200598.753114449] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200598.754665499] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200598.756384825] [Coordinator]: The time of execution of above program is : 4074.7053623199463 ms
+[33mcoordinator_1  |[0m [INFO] [1675200598.757912771] [Coordinator]: Failed
+[36;1mrobot_1        |[0m [INFO] [1675200598.784584474] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200598.787657702] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200598.830491576] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200598.844492636] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200598.805628070] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200598.807836748] [Arm]: Action result: False
+[33mcoordinator_1  |[0m [INFO] [1675200598.838024921] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200598.862236408] [Robot]: Action result: False
+[36marm_1          |[0m [INFO] [1675200598.822109141] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200598.823215148] [Arm]: Doing a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200598.853674449] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200598.855910486] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200598.868434085] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200598.870659895] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200598.878375590] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200598.908609395] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200598.910882077] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200598.924096609] [Robot]: Doing a_navto
+[36marm_1          |[0m [INFO] [1675200598.929604491] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200598.932502791] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200598.934863296] [Arm]: Action: a_pick_up_sample
+[32menvironment_1  |[0m [INFO] [1675200598.944981943] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200598.945986796] [Environment]: Action: a_navto
+[36marm_1          |[0m [INFO] [1675200598.949420874] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200598.959974576] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[32menvironment_1  |[0m [INFO] [1675200598.947145585] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200598.961592432] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200598.974750772] [Robot]: door closed
+[36marm_1          |[0m [INFO] [1675200598.977608268] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200598.993401955] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200599.007411312] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200599.008517921] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200599.011907120] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200599.022684739] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200599.026160399] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200599.027798424] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200599.029022046] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200599.029980669] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200599.044378434] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200599.055120559] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200599.058713866] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200599.060296586] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200599.061909053] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200599.074824510] [Arm]: Doing a_pick_up_sample
+[33mcoordinator_1  |[0m [INFO] [1675200599.070288300] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[36;1mrobot_1        |[0m [INFO] [1675200599.089028329] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[33mcoordinator_1  |[0m [INFO] [1675200599.072377139] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200599.094254358] [Coordinator]: The time of execution of above program is : 4392.949819564819 ms
+[33mcoordinator_1  |[0m [INFO] [1675200599.095599419] [Coordinator]: Failed
+[36;1mrobot_1        |[0m [INFO] [1675200599.097711220] [Robot]: not ready
+[33mcoordinator_1  |[0m [INFO] [1675200599.110199209] [Coordinator]: ENDSIM
+[36marm_1          |[0m [INFO] [1675200599.111089475] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200599.112625360] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200599.113850253] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200599.115088811] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200599.132197840] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200599.150518773] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200599.171254386] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200599.174341221] [Arm]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200599.186204138] [Robot]: Action: a_navto
+[36marm_1          |[0m [INFO] [1675200599.176044226] [Arm]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200599.188624284] [Robot]: Doing a_navto
+[36marm_1          |[0m [INFO] [1675200599.189535827] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200599.190520429] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200599.205457851] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200599.208660086] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200599.215879247] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200599.217740342] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200599.219231207] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200599.220894667] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200599.226178390] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[32menvironment_1  |[0m [INFO] [1675200599.228736447] [Environment]: Receiving message: a_navto,robot1,Room3
+[36;1mrobot_1        |[0m [INFO] [1675200599.240542142] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200599.260013852] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200599.262913540] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200599.276320998] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200599.279049684] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200599.302731992] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200599.304917650] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200599.309586310] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200599.312084833] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200599.326577626] [Arm]: Action: a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200599.346757605] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36marm_1          |[0m [INFO] [1675200599.341556509] [Arm]: Doing a_pick_up_sample
+[32menvironment_1  |[0m [INFO] [1675200599.360675358] [Environment]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200599.362731088] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200599.380160906] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200599.383291520] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200599.399482273] [Arm]: Action: a_pick_up_sample
+[32menvironment_1  |[0m [INFO] [1675200599.413209932] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200599.434242306] [Robot]: door closed
+[36;1mrobot_1        |[0m [INFO] [1675200599.442731946] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200599.471469777] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200599.475003048] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200599.476002141] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200599.476931383] [Robot]: Doing a_navto
+[36marm_1          |[0m [INFO] [1675200599.430834595] [Arm]: Doing a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200599.476349501] [Arm]: not ready
+[33mcoordinator_1  |[0m [INFO] [1675200599.454875473] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200599.455915657] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200599.456725966] [Coordinator]: The time of execution of above program is : 4775.4387855529785 ms
+[33mcoordinator_1  |[0m [INFO] [1675200599.457586049] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200599.458759969] [Coordinator]: ENDSIM
+[32menvironment_1  |[0m [INFO] [1675200599.487261648] [Environment]: Receiving message: a_navto,robot1,Room3
+[36;1mrobot_1        |[0m [INFO] [1675200599.498988776] [Robot]: door closed
+[36;1mrobot_1        |[0m [INFO] [1675200599.518228665] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200599.526724732] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200599.551989840] [Robot]: Action result: False
+[32menvironment_1  |[0m [INFO] [1675200599.493368829] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200599.494371964] [Environment]: Responding
+[33mcoordinator_1  |[0m [INFO] [1675200599.533850962] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200599.535300902] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200599.537460787] [Coordinator]: The time of execution of above program is : 4854.871988296509 ms
+[33mcoordinator_1  |[0m [INFO] [1675200599.538465717] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200599.539388179] [Coordinator]: ENDSIM
+[36marm_1          |[0m [INFO] [1675200599.491441936] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200599.493572935] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200599.509346712] [Arm]: Doing a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200599.532714529] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200599.535399616] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200599.549952787] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200599.565696309] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200599.560382619] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200599.561614949] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200599.573359454] [Environment]: Receiving message: a_navto,robot1,Room3
+[36;1mrobot_1        |[0m [INFO] [1675200599.581173299] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200599.583795038] [Robot]: not ready
+[32menvironment_1  |[0m [INFO] [1675200599.576022579] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200599.597657720] [Environment]: Responding
+[36marm_1          |[0m [INFO] [1675200599.615280963] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200599.628327928] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200599.629392084] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200599.630452996] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200599.647664742] [Robot]: door closed
+[36;1mrobot_1        |[0m [INFO] [1675200599.650098028] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200599.651713386] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200599.671558917] [Arm]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200599.685382305] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[33mcoordinator_1  |[0m [INFO] [1675200599.673921530] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200599.675966227] [Coordinator]: door_closed
+[36marm_1          |[0m [INFO] [1675200599.679479876] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200599.681153430] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200599.682670504] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200599.697302573] [Robot]: not ready
+[33mcoordinator_1  |[0m [INFO] [1675200599.703635146] [Coordinator]: The time of execution of above program is : 4995.562791824341 ms
+[33mcoordinator_1  |[0m [INFO] [1675200599.706821371] [Coordinator]: Failed
+[36marm_1          |[0m [INFO] [1675200599.718668250] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200599.733500041] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200599.736406781] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200599.749958800] [Arm]: Doing a_pick_up_sample
+[33mcoordinator_1  |[0m [INFO] [1675200599.755581817] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200599.759732817] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200599.764194450] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200599.767675446] [Robot]: Action result: False
+[36marm_1          |[0m [INFO] [1675200599.770480301] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200599.772677159] [Arm]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200599.774894271] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200599.776054589] [Robot]: Doing a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200599.790612725] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36marm_1          |[0m [INFO] [1675200599.784476771] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200599.786030094] [Arm]: Doing a_pick_up_sample
+[32menvironment_1  |[0m [INFO] [1675200599.793244151] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200599.794770310] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200599.796386128] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200599.803814069] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200599.819691996] [Robot]: door closed
+[36marm_1          |[0m [INFO] [1675200599.820892272] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200599.831845654] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200599.833814865] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200599.835207561] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200599.839233590] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200599.851310516] [Robot]: not ready
+[33mcoordinator_1  |[0m [INFO] [1675200599.852991743] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[36marm_1          |[0m [INFO] [1675200599.869446446] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200599.883195136] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200599.893604295] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200599.897630027] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200599.901312327] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200599.904375584] [Robot]: not ready
+[33mcoordinator_1  |[0m [INFO] [1675200599.916652906] [Coordinator]: door_closed
+[36marm_1          |[0m [INFO] [1675200599.921783129] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200599.934978867] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200599.938465353] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200599.949796955] [Arm]: Doing a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200599.969959343] [Arm]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200599.961778654] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200599.964647695] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200599.985093736] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200599.987068479] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200599.988859032] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200600.007305758] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200600.021060058] [Robot]: not ready
+[33mcoordinator_1  |[0m [INFO] [1675200600.040318949] [Coordinator]: The time of execution of above program is : 5236.962556838989 ms
+[36marm_1          |[0m [INFO] [1675200600.041500751] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200600.045898957] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200600.048481218] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200600.069381563] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200600.075303700] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200600.077144638] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200600.089191260] [Arm]: not ready
+[33mcoordinator_1  |[0m [INFO] [1675200600.079549603] [Coordinator]: Failed
+[36marm_1          |[0m [INFO] [1675200600.103948722] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200600.107357968] [Arm]: Action: a_pick_up_sample
+[33mcoordinator_1  |[0m [INFO] [1675200600.111518254] [Coordinator]: ENDSIM
+[36marm_1          |[0m [INFO] [1675200600.115849333] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200600.121508191] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200600.126379154] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200600.130362931] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200600.147429171] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200600.187270852] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200600.202941460] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200600.204327282] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200600.206826028] [Environment]: Responding
+[36marm_1          |[0m [INFO] [1675200600.240345281] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200600.243512852] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200600.247288898] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200600.257798772] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200600.238847196] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200600.252686622] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200600.254176325] [Coordinator]: door_closed
+[36;1mrobot_1        |[0m [INFO] [1675200600.269541784] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200600.283021309] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200600.292762663] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200600.294629105] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200600.297147857] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200600.299794419] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200600.317727669] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[33mcoordinator_1  |[0m [INFO] [1675200600.320477538] [Coordinator]: The time of execution of above program is : 5573.972225189209 ms
+[33mcoordinator_1  |[0m [INFO] [1675200600.323078860] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200600.348366902] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200600.331804766] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200600.356116413] [Robot]: Action result: False
+[36marm_1          |[0m [INFO] [1675200600.360373722] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200600.362780978] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200600.376472343] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200600.379319661] [Arm]: Doing a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200600.432630650] [Arm]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200600.388891994] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200600.422178617] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200600.427229699] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200600.445368379] [Robot]: Doing a_navto
+[36marm_1          |[0m [INFO] [1675200600.460348135] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200600.462987894] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200600.465127295] [Arm]: Doing a_pick_up_sample
+[32menvironment_1  |[0m [INFO] [1675200600.464162772] [Environment]: Receiving message: a_navto,robot1,Room3
+[36;1mrobot_1        |[0m [INFO] [1675200600.481347927] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200600.484219141] [Robot]: not ready
+[32menvironment_1  |[0m [INFO] [1675200600.503389664] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200600.504815220] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200600.519791286] [Robot]: door closed
+[36marm_1          |[0m [INFO] [1675200600.518745350] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200600.522143336] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200600.531586473] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200600.534205521] [Arm]: Doing a_pick_up_sample
+[33mcoordinator_1  |[0m [INFO] [1675200600.548371669] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[36;1mrobot_1        |[0m [INFO] [1675200600.559960992] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[33mcoordinator_1  |[0m [INFO] [1675200600.574995279] [Coordinator]: door_closed
+[36;1mrobot_1        |[0m [INFO] [1675200600.563607871] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200600.597718894] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36marm_1          |[0m [INFO] [1675200600.579857871] [Arm]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200600.599231537] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200600.582328309] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200600.593845691] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200600.595422483] [Arm]: Doing a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200600.618978294] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200600.632754187] [Arm]: Action result: False
+[33mcoordinator_1  |[0m [INFO] [1675200600.612611639] [Coordinator]: The time of execution of above program is : 5895.1544761657715 ms
+[33mcoordinator_1  |[0m [INFO] [1675200600.614810827] [Coordinator]: Failed
+[36marm_1          |[0m [INFO] [1675200600.634395563] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200600.635916716] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200600.648614022] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200600.658694680] [Robot]: not ready
+[33mcoordinator_1  |[0m [INFO] [1675200600.662623309] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200600.678157428] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200600.681380052] [Robot]: Action: a_navto
+[36marm_1          |[0m [INFO] [1675200600.693493609] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200600.696190848] [Arm]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200600.690833332] [Robot]: Doing a_navto
+[36marm_1          |[0m [INFO] [1675200600.697703273] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200600.699251073] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200600.713038961] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200600.715258106] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200600.730710452] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200600.735063965] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200600.737575074] [Arm]: Action: a_pick_up_sample
+[32menvironment_1  |[0m [INFO] [1675200600.756827161] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200600.767218231] [Environment]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200600.759980807] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200600.761175898] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200600.752510514] [Arm]: Doing a_pick_up_sample
+[32menvironment_1  |[0m [INFO] [1675200600.799482855] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200600.851927161] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200600.876072732] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200600.994008839] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200600.996304900] [Coordinator]: The time of execution of above program is : 6313.728094100952 ms
+[33mcoordinator_1  |[0m [INFO] [1675200601.053100396] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200601.074225254] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200601.092099918] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200601.094417692] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200601.107225647] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200601.194830823] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200601.209038676] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200601.213339534] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200601.219589095] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200601.252507386] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200601.266721462] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200601.269927603] [Coordinator]: The time of execution of above program is : 6586.503744125366 ms
+[33mcoordinator_1  |[0m [INFO] [1675200601.271234196] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200601.272787717] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200601.278661955] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200601.285536442] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200601.288295630] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200601.311505479] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200601.331621233] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200601.335156253] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200601.342090861] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200601.384370473] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200601.387467919] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200601.402290656] [Coordinator]: The time of execution of above program is : 6707.275629043579 ms
+[33mcoordinator_1  |[0m [INFO] [1675200601.405727221] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200601.437541596] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200601.444761171] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200601.447586003] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200601.460931170] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200601.486799142] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200601.518552291] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200601.560849016] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200601.600357495] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200601.624863090] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200601.647267519] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200601.684623911] [Coordinator]: The time of execution of above program is : 6969.441890716553 ms
+[33mcoordinator_1  |[0m [INFO] [1675200601.701135331] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200601.704066156] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200601.726224919] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200601.762382072] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200601.765659363] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200601.864031311] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200601.873021529] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200601.874237645] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200601.912900610] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200601.923729340] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200601.962717756] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200602.038310135] [Coordinator]: The time of execution of above program is : 7282.6244831085205 ms
+[33mcoordinator_1  |[0m [INFO] [1675200602.145252643] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200602.146982795] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200602.151839100] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200602.154421222] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200602.158955765] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200602.246783164] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200602.282417855] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200602.285700519] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200602.291071254] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200602.309368506] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200602.326677436] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200602.331306117] [Coordinator]: The time of execution of above program is : 7647.597551345825 ms
+[33mcoordinator_1  |[0m [INFO] [1675200602.352486752] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200602.355937968] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200602.363798655] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200602.365869091] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200602.367934035] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200602.438258734] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200602.458473286] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200602.472743256] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200602.482817878] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200602.499128120] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200602.536369334] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200602.555653918] [Coordinator]: The time of execution of above program is : 7856.169700622559 ms
+[33mcoordinator_1  |[0m [INFO] [1675200602.564938337] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200602.585928455] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200602.597929014] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200602.601360057] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200602.610761811] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200602.626210409] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200602.629563237] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200602.684864825] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200602.702726519] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200602.757318391] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200602.781406455] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200602.842473712] [Coordinator]: The time of execution of above program is : 8101.065397262573 ms
+[33mcoordinator_1  |[0m [INFO] [1675200602.845720204] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200602.862728130] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200602.870694948] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200602.872678291] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200602.888603674] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200602.900119001] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200602.917543452] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200602.920897499] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200602.930624412] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200602.963524111] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200602.970418228] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200602.986626540] [Coordinator]: The time of execution of above program is : 8290.154218673706 ms
+[33mcoordinator_1  |[0m [INFO] [1675200603.008701171] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200603.022990842] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200603.030401195] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200603.032631684] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200603.044629196] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200603.054007171] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200603.074674919] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200603.102402115] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200603.108932190] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200603.129057744] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200603.159781977] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200603.184570809] [Coordinator]: The time of execution of above program is : 8480.485677719116 ms
+[33mcoordinator_1  |[0m [INFO] [1675200603.205933095] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200603.221987734] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200603.230701580] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200603.231779950] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200603.232669600] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200603.253402752] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200603.274496142] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200603.278214498] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200603.292164238] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200603.309730810] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200603.329990161] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200603.345790669] [Coordinator]: The time of execution of above program is : 8650.657892227173 ms
+[33mcoordinator_1  |[0m [INFO] [1675200603.365027864] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200603.367915398] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200603.391494716] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200603.399482134] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200603.402613179] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200603.418945480] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200603.421500603] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200603.437021770] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200603.442813786] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200603.451779167] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200603.454307719] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200603.455769949] [Coordinator]: The time of execution of above program is : 8773.954153060913 ms
+[33mcoordinator_1  |[0m [INFO] [1675200603.457322418] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200603.458950660] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200603.465157349] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200603.466741904] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200603.467633710] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200603.479520303] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200603.489964916] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200603.496336619] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200603.513732496] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200603.648247154] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200603.668043514] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200603.670819551] [Coordinator]: The time of execution of above program is : 8987.918853759766 ms
+[33mcoordinator_1  |[0m [INFO] [1675200603.682829524] [Coordinator]: Failed
+[36;1mrobot_1        |[0m [INFO] [1675200603.697600836] [Robot]: Action result: False
+[33mcoordinator_1  |[0m [INFO] [1675200603.690564503] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200603.700384759] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200603.714815082] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200603.856156891] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200603.860041533] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200603.894811283] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200603.900624474] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200603.978639310] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200603.993899513] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200604.014907794] [Coordinator]: The time of execution of above program is : 9313.74478340149 ms
+[33mcoordinator_1  |[0m [INFO] [1675200604.018646466] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200604.052882204] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200604.071945809] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200604.074781154] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200604.088014139] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200604.179044145] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200604.253923099] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200604.301160819] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200604.306655576] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200604.362724618] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200604.365266384] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200604.367521062] [Coordinator]: The time of execution of above program is : 9685.184717178345 ms
+[33mcoordinator_1  |[0m [INFO] [1675200604.381821769] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200604.385003735] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200604.390484628] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200604.392513789] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200604.397365755] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200604.471815620] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200604.517844197] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200604.533513828] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200604.540304161] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200604.571219218] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200604.593306331] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200604.607604727] [Coordinator]: The time of execution of above program is : 9913.53726387024 ms
+[33mcoordinator_1  |[0m [INFO] [1675200604.610720360] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200604.662266593] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200604.667866397] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200604.676456138] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200604.679647867] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200604.693440348] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200604.696726493] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200604.711750323] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200604.729987610] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200604.754017566] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200604.759559310] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200604.761487605] [Coordinator]: The time of execution of above program is : 10079.205751419067 ms
+[33mcoordinator_1  |[0m [INFO] [1675200604.776925408] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200604.789743496] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200604.795647602] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200604.804224474] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200604.808894578] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200604.842892232] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200604.860826481] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200604.863414181] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200604.872247817] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200604.898380851] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200604.917022454] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200604.920848595] [Coordinator]: The time of execution of above program is : 10237.47181892395 ms
+[33mcoordinator_1  |[0m [INFO] [1675200604.955407162] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200604.956736928] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200604.961418754] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200604.975615998] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200604.978385070] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200605.009549856] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200605.035313138] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200605.040090352] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200605.064557365] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200605.085254606] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200605.086261404] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200605.087334369] [Coordinator]: The time of execution of above program is : 10405.863523483276 ms
+[33mcoordinator_1  |[0m [INFO] [1675200605.105975169] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200605.150390697] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200605.155483523] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200605.164956887] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200605.166708706] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200605.183847800] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200605.209680004] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200605.230384967] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200605.247805785] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200605.286807992] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200605.289799867] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200605.314296012] [Coordinator]: The time of execution of above program is : 10609.563827514648 ms
+[33mcoordinator_1  |[0m [INFO] [1675200605.317236952] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200605.320084677] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200605.330179411] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200605.335163135] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200605.350174357] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200605.409727686] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200605.425650886] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200605.428865690] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200605.447832995] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200605.524417879] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200605.527855299] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200605.544787817] [Coordinator]: The time of execution of above program is : 10848.483324050903 ms
+[33mcoordinator_1  |[0m [INFO] [1675200605.550608387] [Coordinator]: Failed
+[36;1mrobot_1        |[0m [INFO] [1675200605.566068604] [Robot]: Action result: False
+[33mcoordinator_1  |[0m [INFO] [1675200605.560569903] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200605.573104065] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200605.575380761] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200605.591096903] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200605.629924960] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200605.635948598] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200605.643838093] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200605.677983367] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200605.696809135] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200605.699866999] [Coordinator]: The time of execution of above program is : 11017.078161239624 ms
+[33mcoordinator_1  |[0m [INFO] [1675200605.766569542] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200605.802707602] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200605.810479578] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200605.815986405] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200605.822106832] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200605.853950515] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200605.891178357] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200605.892356802] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200605.896362203] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200606.004439463] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200606.007254719] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200606.010316649] [Coordinator]: The time of execution of above program is : 11327.193975448608 ms
+[33mcoordinator_1  |[0m [INFO] [1675200606.063634681] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200606.175176174] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200606.179967572] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200606.183342905] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200606.188685729] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200606.214378060] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200606.292331796] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200606.294560412] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200606.299627514] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200606.350889868] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200606.354279202] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200606.407298698] [Coordinator]: The time of execution of above program is : 11674.7727394104 ms
+[33mcoordinator_1  |[0m [INFO] [1675200606.483730889] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200606.554565765] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200606.561254373] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200606.564536165] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200606.567642337] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200606.682311995] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200606.696286115] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200606.710204719] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200606.715537356] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200606.770079977] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200606.772812721] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200606.792791211] [Coordinator]: The time of execution of above program is : 12092.584133148193 ms
+[33mcoordinator_1  |[0m [INFO] [1675200606.806702612] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200606.809228922] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200606.815910703] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200606.823457382] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200606.832874308] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200606.871684016] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200606.872772322] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200606.874259184] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200606.879384235] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200606.903594248] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200606.926853823] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200606.930064039] [Coordinator]: The time of execution of above program is : 12247.179985046387 ms
+[33mcoordinator_1  |[0m [INFO] [1675200606.933128381] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200606.950957284] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200606.959211756] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200606.962092309] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200606.970237221] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200607.001721731] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200607.063216990] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200607.102574459] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200607.109511901] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200607.179980015] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200607.182894914] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200607.204926564] [Coordinator]: The time of execution of above program is : 12502.846002578735 ms
+[33mcoordinator_1  |[0m [INFO] [1675200607.221411779] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200607.278841195] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200607.290360423] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200607.302915672] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200607.312382857] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200607.323382122] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200607.324942555] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200607.326677664] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200607.331766060] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200607.390718129] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200607.394676545] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200607.410353013] [Coordinator]: The time of execution of above program is : 12715.376615524292 ms
+[33mcoordinator_1  |[0m [INFO] [1675200607.424754328] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200607.436724596] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200607.449640266] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200607.452916727] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200607.459877345] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200607.471287332] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200607.476348867] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200607.493470023] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200607.503252278] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200607.515199929] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200607.534336597] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200607.542203482] [Coordinator]: The time of execution of above program is : 12854.106664657593 ms
+[33mcoordinator_1  |[0m [INFO] [1675200607.543805933] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200607.545429739] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200607.555568467] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200607.561387203] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200607.564733990] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200607.592865445] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200607.610185600] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200607.624709342] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200607.635523502] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200607.661366037] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200607.664349542] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200607.685488688] [Coordinator]: The time of execution of above program is : 12984.159708023071 ms
+[33mcoordinator_1  |[0m [INFO] [1675200607.687904879] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200607.715463839] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200607.728224413] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200607.732102090] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200607.744478151] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200607.766694813] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200607.787074430] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200607.801326761] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200607.812817829] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200607.845012753] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200607.865538025] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200607.869146859] [Coordinator]: The time of execution of above program is : 13186.095714569092 ms
+[33mcoordinator_1  |[0m [INFO] [1675200607.885150971] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200607.889023659] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200607.895357669] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200607.901020933] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200607.903712111] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200607.919796039] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200607.921940536] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200607.938451853] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200607.944321273] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200607.959044374] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200607.976337344] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200607.979872775] [Coordinator]: The time of execution of above program is : 13296.665668487549 ms
+[33mcoordinator_1  |[0m [INFO] [1675200607.995473957] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200607.999220124] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200608.015777319] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200608.028537594] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200608.032249665] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200608.048970878] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200608.052205194] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200608.129440951] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200608.136184786] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200608.159392635] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200608.184867344] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200608.187529686] [Coordinator]: The time of execution of above program is : 13504.606008529663 ms
+[33mcoordinator_1  |[0m [INFO] [1675200608.203476668] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200608.224536907] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200608.241813986] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200608.258393323] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200608.261202787] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200608.317955248] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200608.321058989] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200608.324100493] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200608.336135536] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200608.363154330] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200608.379710461] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200608.382847489] [Coordinator]: The time of execution of above program is : 13700.001001358032 ms
+[33mcoordinator_1  |[0m [INFO] [1675200608.457558029] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200608.460487148] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200608.466170251] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200608.468040240] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200608.474787430] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200608.506789858] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200608.542346171] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200608.545263126] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200608.552588978] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200608.727753889] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200608.735900256] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200608.783861606] [Coordinator]: The time of execution of above program is : 14056.095123291016 ms
+[33mcoordinator_1  |[0m [INFO] [1675200608.848254149] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200608.852002641] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200608.857662520] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200608.863196897] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200608.867817684] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200608.912047058] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200608.947423775] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200608.949643596] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200608.957332703] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200609.011003903] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200609.107607909] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200609.149282177] [Coordinator]: The time of execution of above program is : 14427.329778671265 ms
+[33mcoordinator_1  |[0m [INFO] [1675200609.151759737] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200609.153997594] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200609.165631982] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200609.169351207] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200609.171087504] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200609.187388555] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200609.284016689] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200609.298006055] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200609.304830327] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200609.352561337] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200609.355265738] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200609.373425565] [Coordinator]: The time of execution of above program is : 14675.016403198242 ms
+[33mcoordinator_1  |[0m [INFO] [1675200609.487452822] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200609.490112189] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200609.495718526] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200609.498159340] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200609.500043188] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200609.521936549] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200609.541248728] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200609.543907981] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200609.565972167] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200609.584278242] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200609.587058306] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200609.713598152] [Coordinator]: The time of execution of above program is : 14907.06992149353 ms
+[33mcoordinator_1  |[0m [INFO] [1675200609.716674426] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200609.795919851] [Coordinator]: ENDSIM
+[32menvironment_1  |[0m [INFO] [1675200609.839331983] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200609.841829057] [Environment]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200609.804215483] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200609.806174539] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200609.819472518] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200609.867126753] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200609.873135684] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200609.887582064] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200609.890582629] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200609.921170673] [Coordinator]: The time of execution of above program is : 15210.58464050293 ms
+[33mcoordinator_1  |[0m [INFO] [1675200609.924016180] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200609.926680360] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200609.948223970] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200609.951982171] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200609.956931106] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200609.979952211] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200609.994989810] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200610.015903349] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200610.023181546] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200610.036658656] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200610.118660084] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200610.121118877] [Coordinator]: The time of execution of above program is : 15438.43936920166 ms
+[33mcoordinator_1  |[0m [INFO] [1675200610.145598955] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200610.159549307] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200610.169057696] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200610.171233623] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200610.178560096] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200610.224296392] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200610.237701007] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200610.254517921] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200610.264340366] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200610.300902120] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200610.335549226] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200610.338901831] [Coordinator]: The time of execution of above program is : 15656.077861785889 ms
+[33mcoordinator_1  |[0m [INFO] [1675200610.359786624] [Coordinator]: Failed
+[36;1mrobot_1        |[0m [INFO] [1675200610.369889490] [Robot]: Action result: False
+[33mcoordinator_1  |[0m [INFO] [1675200610.363220779] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200610.384604599] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200610.386923042] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200610.416936608] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200610.433798479] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200610.453460749] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200610.465549980] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200610.495236521] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200610.514685546] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200610.530166968] [Coordinator]: The time of execution of above program is : 15834.451675415039 ms
+[33mcoordinator_1  |[0m [INFO] [1675200610.533215108] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200610.536110066] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200610.554285215] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200610.557739149] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200610.561412863] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200610.592330987] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200610.596116242] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200610.599834162] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200610.609509000] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200610.634895847] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200610.650488436] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200610.653217946] [Coordinator]: The time of execution of above program is : 15970.733642578125 ms
+[33mcoordinator_1  |[0m [INFO] [1675200610.739433050] [Coordinator]: Failed
+[36;1mrobot_1        |[0m [INFO] [1675200610.747516351] [Robot]: Action result: False
+[33mcoordinator_1  |[0m [INFO] [1675200610.742387464] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200610.761800792] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200610.776654470] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200610.857545927] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200610.860367103] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200610.913369246] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200610.921581514] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200610.929827175] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200610.931514797] [Coordinator]: door_closed
+[33mcoordinator_1  |[0m [INFO] [1675200610.932751796] [Coordinator]: The time of execution of above program is : 16251.1625289917 ms
+[33mcoordinator_1  |[0m [INFO] [1675200610.934009987] [Coordinator]: Failed
+[33mcoordinator_1  |[0m [INFO] [1675200610.934967801] [Coordinator]: ENDSIM
+[36;1mrobot_1        |[0m [INFO] [1675200610.951894845] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200610.954595079] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200610.966147870] [Robot]: Doing a_navto
+[32menvironment_1  |[0m [INFO] [1675200610.982965789] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200610.984210652] [Environment]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200610.985036593] [Environment]: Responding
+[36;1mrobot_1        |[0m [INFO] [1675200610.992010822] [Robot]: door closed
+[33mcoordinator_1  |[0m [INFO] [1675200611.011487690] [Coordinator]: Receiving sync message: error,door_closed,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200611.045660541] [Coordinator]: door_closed
+[33mplanning_coordinator_1 exited with code 137
+[0m[36;1mplanning_robot_1 exited with code 137
+[0m[35mplanning_nurse_1 exited with code 137
+[0m[32mplanning_environment_1 exited with code 137
+[0m[36mplanning_arm_1 exited with code 137
+[0m[34mplanning_planner_1 exited with code 137
+[0m

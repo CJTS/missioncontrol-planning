@@ -1,0 +1,540 @@
+Attaching to planning_coordinator_1, planning_planner_1, planning_environment_1, planning_nurse_1, planning_robot_1, planning_arm_1
+[33mcoordinator_1  |[0m [INFO] [1675200641.285195493] [Coordinator]: Starting Coordinator server
+[33mcoordinator_1  |[0m [INFO] [1675200641.353709798] [Coordinator]: Coordinator server started
+[33mcoordinator_1  |[0m [INFO] [1675200641.356195918] [Coordinator]: Starting Coordinator clients
+[33mcoordinator_1  |[0m [INFO] [1675200642.404382578] [Coordinator]: planner sync service not available, waiting again...
+[33mcoordinator_1  |[0m [INFO] [1675200643.433272387] [Coordinator]: planner sync service not available, waiting again...
+[33mcoordinator_1  |[0m [INFO] [1675200644.474139132] [Coordinator]: planner sync service not available, waiting again...
+[33mcoordinator_1  |[0m [INFO] [1675200645.491396247] [Coordinator]: planner sync service not available, waiting again...
+[32menvironment_1  |[0m [INFO] [1675200645.968248701] [Environment]: Starting Environment server
+[32menvironment_1  |[0m [INFO] [1675200645.999829382] [Environment]: Environment server started
+[36;1mrobot_1        |[0m [INFO] [1675200646.406699223] [Robot]: Starting Robot server
+[35mnurse_1        |[0m [INFO] [1675200646.417203342] [Nurse]: Starting Nurse server
+[36;1mrobot_1        |[0m [INFO] [1675200646.430553686] [Robot]: Robot server started
+[36;1mrobot_1        |[0m [INFO] [1675200646.431422348] [Robot]: Starting Robots clients
+[35mnurse_1        |[0m [INFO] [1675200646.434310713] [Nurse]: Nurse server started
+[35mnurse_1        |[0m [INFO] [1675200646.448118434] [Nurse]: Starting Nurse clients
+[36;1mrobot_1        |[0m [INFO] [1675200646.472171988] [Robot]: Robots clients started
+[33mcoordinator_1  |[0m [INFO] [1675200646.506338137] [Coordinator]: planner sync service not available, waiting again...
+[35mnurse_1        |[0m [INFO] [1675200646.525110853] [Nurse]: Nurse clients started
+[35mnurse_1        |[0m [INFO] [1675200646.543374246] [Nurse]: Sent request
+[36marm_1          |[0m [INFO] [1675200647.325241053] [Arm]: Starting Arm server
+[36marm_1          |[0m [INFO] [1675200647.336650474] [Arm]: Arm server started
+[36marm_1          |[0m [INFO] [1675200647.344373795] [Arm]: Starting Nurse clients
+[36marm_1          |[0m [INFO] [1675200647.380449092] [Arm]: Nurse clients started
+[33mcoordinator_1  |[0m [INFO] [1675200647.520637749] [Coordinator]: planner sync service not available, waiting again...
+[33mcoordinator_1  |[0m [INFO] [1675200648.540793094] [Coordinator]: planner sync service not available, waiting again...
+[34mplanner_1      |[0m [INFO] [1675200649.441153564] [Planner]: Starting Planner server
+[34mplanner_1      |[0m [INFO] [1675200649.473292275] [Planner]: Planner server started
+[33mcoordinator_1  |[0m [INFO] [1675200649.639451183] [Coordinator]: Coordinator clients started
+[33mcoordinator_1  |[0m [INFO] [1675200649.719141647] [Coordinator]: Receiving message of nurse1 in room3.
+[33mcoordinator_1  |[0m [INFO] [1675200649.724087153] [Coordinator]: Planing
+[33mcoordinator_1  |[0m [INFO] [1675200649.735255675] [Coordinator]: Sending response
+[33mcoordinator_1  |[0m [INFO] [1675200649.742400921] [Coordinator]: Creating plan for: robot1, nurse1, arm1 
+[34mplanner_1      |[0m [INFO] [1675200649.753724813] [Planner]: Receiving sync message. need_plan,robot1,nurse1,arm1
+[35mnurse_1        |[0m [INFO] [1675200649.758758378] [Nurse]: Request response:Okay!
+[34mplanner_1      |[0m [INFO] [1675200649.769791058] [Planner]: Creating plan for: robot1 robot1 nurse1
+[34mplanner_1      |[0m [INFO] [1675200649.804878661] [Planner]: a_navto,robot1,Room1
+[34mplanner_1      |[0m [INFO] [1675200649.820712338] [Planner]: a_approach_nurse,robot1
+[34mplanner_1      |[0m [INFO] [1675200649.836083980] [Planner]: a_authenticate_nurse,robot1,nurse1
+[34mplanner_1      |[0m [INFO] [1675200649.851757280] [Planner]: a_open_drawer,robot1
+[34mplanner_1      |[0m [INFO] [1675200649.867483002] [Planner]: a_deposit,nurse1,robot1
+[34mplanner_1      |[0m [INFO] [1675200649.873458981] [Planner]: a_close_drawer,robot1
+[34mplanner_1      |[0m [INFO] [1675200649.875110632] [Planner]: a_navto,robot1,Room3
+[34mplanner_1      |[0m [INFO] [1675200649.876578128] [Planner]: a_approach_arm,robot1,arm1
+[34mplanner_1      |[0m [INFO] [1675200649.883106063] [Planner]: a_open_drawer,robot1
+[34mplanner_1      |[0m [INFO] [1675200649.898311666] [Planner]: a_pick_up_sample,arm1,robot1
+[34mplanner_1      |[0m [INFO] [1675200649.914467879] [Planner]: a_close_drawer,robot1
+[34mplanner_1      |[0m [INFO] [1675200649.926563303] [Planner]: Sending response
+[33mcoordinator_1  |[0m [INFO] [1675200649.948110032] [Coordinator]: Plan received for: robot1, nurse1, arm1 
+[33mcoordinator_1  |[0m [INFO] [1675200649.971462591] [Coordinator]: a_navto,robot1,Room1/a_approach_nurse,robot1/a_authenticate_nurse,robot1,nurse1/a_open_drawer,robot1/a_deposit,nurse1,robot1/a_close_drawer,robot1/a_navto,robot1,Room3/a_approach_arm,robot1,arm1/a_open_drawer,robot1/a_pick_up_sample,arm1,robot1/a_close_drawer,robot1
+[33mcoordinator_1  |[0m [INFO] [1675200649.986560503] [Coordinator]: a_navto,robot1,Room1
+[33mcoordinator_1  |[0m [INFO] [1675200650.002189235] [Coordinator]: a_approach_nurse,robot1
+[33mcoordinator_1  |[0m [INFO] [1675200650.018721156] [Coordinator]: a_authenticate_nurse,robot1,nurse1
+[33mcoordinator_1  |[0m [INFO] [1675200650.034092269] [Coordinator]: a_open_drawer,robot1
+[33mcoordinator_1  |[0m [INFO] [1675200650.036040932] [Coordinator]: a_deposit,nurse1,robot1
+[33mcoordinator_1  |[0m [INFO] [1675200650.049396496] [Coordinator]: a_close_drawer,robot1
+[33mcoordinator_1  |[0m [INFO] [1675200650.065401243] [Coordinator]: a_navto,robot1,Room3
+[33mcoordinator_1  |[0m [INFO] [1675200650.068451244] [Coordinator]: a_approach_arm,robot1,arm1
+[33mcoordinator_1  |[0m [INFO] [1675200650.082630122] [Coordinator]: a_open_drawer,robot1
+[33mcoordinator_1  |[0m [INFO] [1675200650.085273287] [Coordinator]: a_pick_up_sample,arm1,robot1
+[33mcoordinator_1  |[0m [INFO] [1675200650.100030809] [Coordinator]: a_close_drawer,robot1
+[33mcoordinator_1  |[0m [INFO] [1675200650.112277001] [Coordinator]: Sending plans
+[33mcoordinator_1  |[0m [INFO] [1675200650.114467615] [Coordinator]: Plans sent
+[36;1mrobot_1        |[0m [INFO] [1675200650.136680606] [Robot]: Receiving message.
+[35mnurse_1        |[0m [INFO] [1675200650.140699347] [Nurse]: Receiving message.
+[36;1mrobot_1        |[0m [INFO] [1675200650.177419035] [Robot]: Robot's actions:
+[36marm_1          |[0m [INFO] [1675200650.179907476] [Arm]: Receiving message.
+[36marm_1          |[0m [INFO] [1675200650.188682937] [Arm]: Arm's actions:
+[36;1mrobot_1        |[0m [INFO] [1675200650.189933992] [Robot]: Action: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200650.192411702] [Robot]: Doing a_navto
+[35mnurse_1        |[0m [INFO] [1675200650.195967179] [Nurse]: Nurse's actions:
+[35mnurse_1        |[0m [INFO] [1675200650.215486289] [Nurse]: a_authenticate_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200650.194265691] [Robot]: a_navto
+[36marm_1          |[0m [INFO] [1675200650.202435783] [Arm]: a_approach_arm
+[32menvironment_1  |[0m [INFO] [1675200650.213345847] [Environment]: Receiving message: monitor
+[32menvironment_1  |[0m [INFO] [1675200650.215789977] [Environment]: Action: monitor
+[36marm_1          |[0m [INFO] [1675200650.229566432] [Arm]: a_pick_up_sample
+[35mnurse_1        |[0m [INFO] [1675200650.252324423] [Nurse]: Action: a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200650.263662898] [Nurse]: Doing a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200650.267556659] [Nurse]: a_deposit
+[36;1mrobot_1        |[0m [INFO] [1675200650.209884260] [Robot]: a_authenticate_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200650.223730939] [Robot]: a_open_drawer
+[36;1mrobot_1        |[0m [INFO] [1675200650.226986804] [Robot]: a_deposit
+[36;1mrobot_1        |[0m [INFO] [1675200650.230132602] [Robot]: a_close_drawer
+[36;1mrobot_1        |[0m [INFO] [1675200650.233421430] [Robot]: a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200650.235021495] [Robot]: a_approach_arm
+[36;1mrobot_1        |[0m [INFO] [1675200650.236356195] [Robot]: a_open_drawer
+[36;1mrobot_1        |[0m [INFO] [1675200650.245708662] [Robot]: a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200650.248404711] [Robot]: a_close_drawer
+[36;1mrobot_1        |[0m [INFO] [1675200650.269260515] [Robot]: Receiving sync message. a_authenticate_nurse,robot1,nurse1
+[36;1mrobot_1        |[0m [INFO] [1675200650.279051870] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200650.269413362] [Arm]: Action: a_approach_arm
+[36marm_1          |[0m [INFO] [1675200650.270729667] [Arm]: Doing a_approach_arm
+[35mnurse_1        |[0m [INFO] [1675200650.291165145] [Nurse]: not ready
+[35mnurse_1        |[0m [INFO] [1675200650.294078890] [Nurse]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200650.308936351] [Robot]: Receiving sync message. a_authenticate_nurse,robot1,nurse1
+[35mnurse_1        |[0m [INFO] [1675200650.300447769] [Nurse]: Action: a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200650.303204294] [Nurse]: Doing a_authenticate_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200650.312298826] [Robot]: not ready
+[32menvironment_1  |[0m [INFO] [1675200650.318465404] [Environment]: Receiving message: a_navto,robot1,Room1
+[32menvironment_1  |[0m [INFO] [1675200650.320022946] [Environment]: Action: a_navto
+[35mnurse_1        |[0m [INFO] [1675200650.323187914] [Nurse]: not ready
+[35mnurse_1        |[0m [INFO] [1675200650.338530171] [Nurse]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200650.348509952] [Robot]: Receiving sync message. a_authenticate_nurse,robot1,nurse1
+[35mnurse_1        |[0m [INFO] [1675200650.341116193] [Nurse]: Action: a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200650.343963219] [Nurse]: Doing a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200650.361815961] [Nurse]: not ready
+[35mnurse_1        |[0m [INFO] [1675200650.365404661] [Nurse]: Action result: False
+[35mnurse_1        |[0m [INFO] [1675200650.367689387] [Nurse]: Action: a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200650.368998745] [Nurse]: Doing a_authenticate_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200650.355815304] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200650.374360944] [Robot]: Receiving sync message. a_authenticate_nurse,robot1,nurse1
+[36;1mrobot_1        |[0m [INFO] [1675200650.381309412] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200650.397784333] [Robot]: success
+[36;1mrobot_1        |[0m [INFO] [1675200650.404314664] [Robot]: Action result: True
+[36;1mrobot_1        |[0m [INFO] [1675200650.417045632] [Robot]: Action: a_approach_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200650.420069572] [Robot]: Doing a_approach_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200650.422208422] [Robot]: Receiving sync message. a_authenticate_nurse,robot1,nurse1
+[36;1mrobot_1        |[0m [INFO] [1675200650.423537610] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200650.440006244] [Robot]: Receiving sync message. a_authenticate_nurse,robot1,nurse1
+[36;1mrobot_1        |[0m [INFO] [1675200650.441078864] [Robot]: not ready
+[32menvironment_1  |[0m [INFO] [1675200650.381028982] [Environment]: Responding
+[32menvironment_1  |[0m [INFO] [1675200650.443993096] [Environment]: Receiving message: monitor
+[32menvironment_1  |[0m [INFO] [1675200650.447481011] [Environment]: Action: monitor
+[33mcoordinator_1  |[0m [INFO] [1675200650.406873625] [Coordinator]: Receiving sync message: action_complete,a_navto
+[33mcoordinator_1  |[0m [INFO] [1675200650.408010158] [Coordinator]: action_complete
+[33mcoordinator_1  |[0m [INFO] [1675200650.408918787] [Coordinator]: plans_actions_current 1 of 11
+[35mnurse_1        |[0m [INFO] [1675200650.399435740] [Nurse]: not ready
+[35mnurse_1        |[0m [INFO] [1675200650.402123281] [Nurse]: Action result: False
+[35mnurse_1        |[0m [INFO] [1675200650.411105016] [Nurse]: Action: a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200650.412293048] [Nurse]: Doing a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200650.429338486] [Nurse]: not ready
+[35mnurse_1        |[0m [INFO] [1675200650.432288959] [Nurse]: Action result: False
+[35mnurse_1        |[0m [INFO] [1675200650.436092003] [Nurse]: Action: a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200650.437764136] [Nurse]: Doing a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200650.457521109] [Nurse]: not ready
+[35mnurse_1        |[0m [INFO] [1675200650.460188584] [Nurse]: Action result: False
+[35mnurse_1        |[0m [INFO] [1675200650.462779766] [Nurse]: Action: a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200650.475461326] [Nurse]: Doing a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200650.487748967] [Nurse]: not ready
+[35mnurse_1        |[0m [INFO] [1675200650.488995594] [Nurse]: Action result: False
+[35mnurse_1        |[0m [INFO] [1675200650.490264362] [Nurse]: Action: a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200650.491648775] [Nurse]: Doing a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200650.505100594] [Nurse]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200650.479686832] [Robot]: Receiving sync message. a_authenticate_nurse,robot1,nurse1
+[35mnurse_1        |[0m [INFO] [1675200650.513025406] [Nurse]: Action result: False
+[35mnurse_1        |[0m [INFO] [1675200650.514432238] [Nurse]: Action: a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200650.515568258] [Nurse]: Doing a_authenticate_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200650.482303447] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200650.496843409] [Robot]: Receiving sync message. a_authenticate_nurse,robot1,nurse1
+[36;1mrobot_1        |[0m [INFO] [1675200650.499399253] [Robot]: not ready
+[32menvironment_1  |[0m [INFO] [1675200650.495428050] [Environment]: Receiving message: a_approach_arm,robot1,arm1
+[36;1mrobot_1        |[0m [INFO] [1675200650.520047039] [Robot]: Receiving sync message. a_authenticate_nurse,robot1,nurse1
+[36;1mrobot_1        |[0m [INFO] [1675200650.531946016] [Robot]: not ready
+[35mnurse_1        |[0m [INFO] [1675200650.537967546] [Nurse]: not ready
+[35mnurse_1        |[0m [INFO] [1675200650.551417835] [Nurse]: Action result: False
+[35mnurse_1        |[0m [INFO] [1675200650.552856166] [Nurse]: Action: a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200650.553952454] [Nurse]: Doing a_authenticate_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200650.558174720] [Robot]: Receiving sync message. a_authenticate_nurse,robot1,nurse1
+[35mnurse_1        |[0m [INFO] [1675200650.567003258] [Nurse]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200650.560668174] [Robot]: not ready
+[35mnurse_1        |[0m [INFO] [1675200650.570266478] [Nurse]: Action result: False
+[35mnurse_1        |[0m [INFO] [1675200650.580968472] [Nurse]: Action: a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200650.582091539] [Nurse]: Doing a_authenticate_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200650.590695023] [Robot]: Receiving sync message. a_authenticate_nurse,robot1,nurse1
+[36;1mrobot_1        |[0m [INFO] [1675200650.593342980] [Robot]: not ready
+[32menvironment_1  |[0m [INFO] [1675200650.592912654] [Environment]: Action: a_approach_arm
+[32menvironment_1  |[0m [INFO] [1675200650.596016854] [Environment]: Responding
+[35mnurse_1        |[0m [INFO] [1675200650.607481574] [Nurse]: not ready
+[35mnurse_1        |[0m [INFO] [1675200650.608980864] [Nurse]: Action result: False
+[35mnurse_1        |[0m [INFO] [1675200650.612039523] [Nurse]: Action: a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200650.614183584] [Nurse]: Doing a_authenticate_nurse
+[36marm_1          |[0m [INFO] [1675200650.609163988] [Arm]: success
+[36marm_1          |[0m [INFO] [1675200650.611798091] [Arm]: Action result: True
+[36marm_1          |[0m [INFO] [1675200650.614469942] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200650.619558858] [Arm]: Doing a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200650.648203106] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200650.649605701] [Arm]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200650.618439894] [Robot]: Receiving sync message. a_authenticate_nurse,robot1,nurse1
+[32menvironment_1  |[0m [INFO] [1675200650.639611329] [Environment]: Receiving message: a_approach_nurse,robot1
+[35mnurse_1        |[0m [INFO] [1675200650.633064735] [Nurse]: not ready
+[36marm_1          |[0m [INFO] [1675200650.653104964] [Arm]: Action: a_pick_up_sample
+[35mnurse_1        |[0m [INFO] [1675200650.635420220] [Nurse]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200650.622310052] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200650.624951426] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200650.632043949] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200650.642787056] [Robot]: Receiving sync message. a_authenticate_nurse,robot1,nurse1
+[35mnurse_1        |[0m [INFO] [1675200650.638050404] [Nurse]: Action: a_authenticate_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200650.644166691] [Robot]: not ready
+[35mnurse_1        |[0m [INFO] [1675200650.639617897] [Nurse]: Doing a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200650.651051727] [Nurse]: not ready
+[35mnurse_1        |[0m [INFO] [1675200650.653523479] [Nurse]: Action result: False
+[36marm_1          |[0m [INFO] [1675200650.655979411] [Arm]: Doing a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200650.682211338] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200650.683318619] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200650.684617238] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200650.685843254] [Arm]: Doing a_pick_up_sample
+[35mnurse_1        |[0m [INFO] [1675200650.667084004] [Nurse]: Action: a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200650.680209453] [Nurse]: Doing a_authenticate_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200650.671606607] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200650.674300331] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200650.690205307] [Robot]: Receiving sync message. a_authenticate_nurse,robot1,nurse1
+[36;1mrobot_1        |[0m [INFO] [1675200650.693236646] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200650.696794220] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200650.701043767] [Robot]: not ready
+[35mnurse_1        |[0m [INFO] [1675200650.699287534] [Nurse]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200650.711857139] [Robot]: Receiving sync message. a_authenticate_nurse,robot1,nurse1
+[36;1mrobot_1        |[0m [INFO] [1675200650.714087415] [Robot]: not ready
+[35mnurse_1        |[0m [INFO] [1675200650.703617470] [Nurse]: Action result: False
+[35mnurse_1        |[0m [INFO] [1675200650.705043779] [Nurse]: Action: a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200650.706837725] [Nurse]: Doing a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200650.721532055] [Nurse]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200650.721017357] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200650.722085807] [Robot]: not ready
+[32menvironment_1  |[0m [INFO] [1675200650.716628959] [Environment]: Action: a_approach_nurse
+[36marm_1          |[0m [INFO] [1675200650.713254435] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200650.715449785] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200650.717100780] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200650.718594645] [Arm]: Doing a_pick_up_sample
+[35mnurse_1        |[0m [INFO] [1675200650.726530781] [Nurse]: Action result: False
+[35mnurse_1        |[0m [INFO] [1675200650.728694836] [Nurse]: Action: a_authenticate_nurse
+[36marm_1          |[0m [INFO] [1675200650.730968622] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200650.733707547] [Arm]: Action result: False
+[32menvironment_1  |[0m [INFO] [1675200650.732283258] [Environment]: Responding
+[32menvironment_1  |[0m [INFO] [1675200650.737225242] [Environment]: Receiving message: monitor
+[35mnurse_1        |[0m [INFO] [1675200650.730399313] [Nurse]: Doing a_authenticate_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200650.735711246] [Robot]: Receiving sync message. a_authenticate_nurse,robot1,nurse1
+[32menvironment_1  |[0m [INFO] [1675200650.738578314] [Environment]: Action: monitor
+[36marm_1          |[0m [INFO] [1675200650.746897603] [Arm]: Action: a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200650.751168020] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200650.748236634] [Arm]: Doing a_pick_up_sample
+[35mnurse_1        |[0m [INFO] [1675200650.761488420] [Nurse]: not ready
+[35mnurse_1        |[0m [INFO] [1675200650.777593513] [Nurse]: Action result: False
+[35mnurse_1        |[0m [INFO] [1675200650.780211858] [Nurse]: Action: a_authenticate_nurse
+[32menvironment_1  |[0m [INFO] [1675200650.773300673] [Environment]: Receiving message: monitor
+[32menvironment_1  |[0m [INFO] [1675200650.788687457] [Environment]: Action: monitor
+[36;1mrobot_1        |[0m [INFO] [1675200650.769268540] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200650.771919930] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200650.783195078] [Robot]: success
+[36;1mrobot_1        |[0m [INFO] [1675200650.788210428] [Robot]: Action result: True
+[36marm_1          |[0m [INFO] [1675200650.793889449] [Arm]: not ready
+[35mnurse_1        |[0m [INFO] [1675200650.809482675] [Nurse]: Doing a_authenticate_nurse
+[33mcoordinator_1  |[0m [INFO] [1675200650.803095324] [Coordinator]: Receiving sync message: action_complete,a_approach_nurse
+[33mcoordinator_1  |[0m [INFO] [1675200650.807436332] [Coordinator]: action_complete
+[36marm_1          |[0m [INFO] [1675200650.796342458] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200650.823855269] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200650.826396502] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200650.824464565] [Robot]: Receiving sync message. a_authenticate_nurse,robot1,nurse1
+[33mcoordinator_1  |[0m [INFO] [1675200650.838291232] [Coordinator]: plans_actions_current 2 of 11
+[36;1mrobot_1        |[0m [INFO] [1675200650.839872028] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200650.841784406] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200650.842747660] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200650.846928414] [Robot]: Action: a_authenticate_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200650.854391074] [Robot]: Doing a_authenticate_nurse
+[36marm_1          |[0m [INFO] [1675200650.872961351] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200650.875775997] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200650.878168583] [Arm]: Action: a_pick_up_sample
+[35mnurse_1        |[0m [INFO] [1675200650.857906720] [Nurse]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200650.855891063] [Robot]: wating for nurse1 to authenticate to robot1
+[36;1mrobot_1        |[0m [INFO] [1675200650.857397765] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200650.861140827] [Robot]: Action: a_authenticate_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200650.864164275] [Robot]: Doing a_authenticate_nurse
+[35mnurse_1        |[0m [INFO] [1675200650.860295477] [Nurse]: Action result: False
+[35mnurse_1        |[0m [INFO] [1675200650.878020292] [Nurse]: Action: a_authenticate_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200650.878086697] [Robot]: wating for nurse1 to authenticate to robot1
+[32menvironment_1  |[0m [INFO] [1675200650.878332912] [Environment]: Receiving message: monitor
+[32menvironment_1  |[0m [INFO] [1675200650.879619954] [Environment]: Action: monitor
+[36marm_1          |[0m [INFO] [1675200650.884535068] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200650.887989212] [Robot]: Action result: False
+[35mnurse_1        |[0m [INFO] [1675200650.892261224] [Nurse]: Doing a_authenticate_nurse
+[36marm_1          |[0m [INFO] [1675200650.913848374] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200650.915363344] [Arm]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200650.905621957] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200650.906928181] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200650.912306320] [Robot]: Receiving sync message. a_authenticate_nurse,robot1,nurse1
+[32menvironment_1  |[0m [INFO] [1675200650.919618987] [Environment]: Receiving message: monitor
+[32menvironment_1  |[0m [INFO] [1675200650.921132136] [Environment]: Action: monitor
+[36;1mrobot_1        |[0m [INFO] [1675200650.926832978] [Robot]: Action: a_authenticate_nurse
+[32menvironment_1  |[0m [INFO] [1675200650.932675292] [Environment]: Receiving message: monitor
+[36marm_1          |[0m [INFO] [1675200650.933493859] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200650.936332211] [Arm]: Doing a_pick_up_sample
+[32menvironment_1  |[0m [INFO] [1675200650.934104495] [Environment]: Action: monitor
+[36;1mrobot_1        |[0m [INFO] [1675200650.942834140] [Robot]: Authenticate nurse
+[36;1mrobot_1        |[0m [INFO] [1675200650.951594419] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200650.953748302] [Robot]: not ready
+[32menvironment_1  |[0m [INFO] [1675200650.960800266] [Environment]: Receiving message: monitor
+[32menvironment_1  |[0m [INFO] [1675200650.963916525] [Environment]: Action: monitor
+[36;1mrobot_1        |[0m [INFO] [1675200650.956866348] [Robot]: Doing a_authenticate_nurse
+[36;1mrobot_1        |[0m [INFO] [1675200650.958478975] [Robot]: Action result: True
+[36marm_1          |[0m [INFO] [1675200650.963873956] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200650.965699784] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200650.967454490] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200650.969259093] [Arm]: Doing a_pick_up_sample
+[33mcoordinator_1  |[0m [INFO] [1675200650.970896404] [Coordinator]: Receiving sync message: action_complete,a_authenticate_nurse
+[33mcoordinator_1  |[0m [INFO] [1675200651.016041365] [Coordinator]: action_complete
+[33mcoordinator_1  |[0m [INFO] [1675200651.019689737] [Coordinator]: plans_actions_current 3 of 11
+[36marm_1          |[0m [INFO] [1675200651.010435106] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200651.012083588] [Arm]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200650.974311127] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200650.992615373] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200651.012900617] [Robot]: Receiving sync message. a_deposit,nurse1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200651.028729192] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200651.028865096] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200651.031454836] [Arm]: Doing a_pick_up_sample
+[35mnurse_1        |[0m [INFO] [1675200650.974041046] [Nurse]: success
+[35mnurse_1        |[0m [INFO] [1675200650.984931655] [Nurse]: Action result: True
+[35mnurse_1        |[0m [INFO] [1675200650.991273870] [Nurse]: Action: a_deposit
+[35mnurse_1        |[0m [INFO] [1675200650.996067598] [Nurse]: Doing a_deposit
+[35mnurse_1        |[0m [INFO] [1675200651.055677975] [Nurse]: not ready
+[35mnurse_1        |[0m [INFO] [1675200651.070814690] [Nurse]: Action result: False
+[35mnurse_1        |[0m [INFO] [1675200651.074470375] [Nurse]: Action: a_deposit
+[32menvironment_1  |[0m [INFO] [1675200651.054377031] [Environment]: Receiving message: monitor
+[36;1mrobot_1        |[0m [INFO] [1675200651.060096138] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200651.070937563] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200651.075633531] [Robot]: Action: a_open_drawer
+[35mnurse_1        |[0m [INFO] [1675200651.090485095] [Nurse]: Doing a_deposit
+[36;1mrobot_1        |[0m [INFO] [1675200651.079287174] [Robot]: Doing a_open_drawer
+[36;1mrobot_1        |[0m [INFO] [1675200651.110491805] [Robot]: success
+[36;1mrobot_1        |[0m [INFO] [1675200651.112658066] [Robot]: Action result: True
+[36;1mrobot_1        |[0m [INFO] [1675200651.135178612] [Robot]: Receiving sync message. a_deposit,nurse1,robot1
+[36marm_1          |[0m [INFO] [1675200651.102597002] [Arm]: not ready
+[32menvironment_1  |[0m [INFO] [1675200651.123940803] [Environment]: Action: monitor
+[36marm_1          |[0m [INFO] [1675200651.114235373] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200651.118516381] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200651.122023171] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200651.156429022] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200651.166509704] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200651.167624967] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200651.192118328] [Robot]: Action: a_deposit
+[33mcoordinator_1  |[0m [INFO] [1675200651.150696537] [Coordinator]: Receiving sync message: action_complete,a_open_drawer
+[33mcoordinator_1  |[0m [INFO] [1675200651.153304082] [Coordinator]: action_complete
+[36;1mrobot_1        |[0m [INFO] [1675200651.195676489] [Robot]: Doing a_deposit
+[35mnurse_1        |[0m [INFO] [1675200651.161864304] [Nurse]: not ready
+[36marm_1          |[0m [INFO] [1675200651.173391640] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200651.185305016] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200651.188598280] [Arm]: Action: a_pick_up_sample
+[33mcoordinator_1  |[0m [INFO] [1675200651.165995429] [Coordinator]: plans_actions_current 4 of 11
+[36marm_1          |[0m [INFO] [1675200651.190768887] [Arm]: Doing a_pick_up_sample
+[35mnurse_1        |[0m [INFO] [1675200651.164333146] [Nurse]: Action result: False
+[35mnurse_1        |[0m [INFO] [1675200651.176757986] [Nurse]: Action: a_deposit
+[35mnurse_1        |[0m [INFO] [1675200651.179324819] [Nurse]: Doing a_deposit
+[36;1mrobot_1        |[0m [INFO] [1675200651.211253166] [Robot]: Receiving sync message. a_deposit,nurse1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200651.217682245] [Robot]: Deposit
+[36;1mrobot_1        |[0m [INFO] [1675200651.222938463] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200651.224957256] [Robot]: not ready
+[35mnurse_1        |[0m [INFO] [1675200651.224638630] [Nurse]: success
+[32menvironment_1  |[0m [INFO] [1675200651.230014520] [Environment]: Receiving message: monitor
+[36;1mrobot_1        |[0m [INFO] [1675200651.226661739] [Robot]: wating for nurse1 to deposit in robot1
+[36;1mrobot_1        |[0m [INFO] [1675200651.229083470] [Robot]: Action result: False
+[36marm_1          |[0m [INFO] [1675200651.229966986] [Arm]: not ready
+[35mnurse_1        |[0m [INFO] [1675200651.231122853] [Nurse]: Action result: True
+[36marm_1          |[0m [INFO] [1675200651.233745207] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200651.235667141] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200651.236924545] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200651.241576502] [Robot]: Action: a_deposit
+[36;1mrobot_1        |[0m [INFO] [1675200651.245055868] [Robot]: Doing a_deposit
+[33mcoordinator_1  |[0m [INFO] [1675200651.251064624] [Coordinator]: Receiving sync message: action_complete,a_deposit
+[33mcoordinator_1  |[0m [INFO] [1675200651.253776559] [Coordinator]: action_complete
+[36;1mrobot_1        |[0m [INFO] [1675200651.247413794] [Robot]: Action result: True
+[36;1mrobot_1        |[0m [INFO] [1675200651.250352970] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200651.258346032] [Robot]: not ready
+[32menvironment_1  |[0m [INFO] [1675200651.259380611] [Environment]: Action: monitor
+[36marm_1          |[0m [INFO] [1675200651.263263900] [Arm]: not ready
+[33mcoordinator_1  |[0m [INFO] [1675200651.262913290] [Coordinator]: plans_actions_current 5 of 11
+[36;1mrobot_1        |[0m [INFO] [1675200651.269005837] [Robot]: Action: a_close_drawer
+[36;1mrobot_1        |[0m [INFO] [1675200651.274326178] [Robot]: Doing a_close_drawer
+[36;1mrobot_1        |[0m [INFO] [1675200651.275497356] [Robot]: success
+[36;1mrobot_1        |[0m [INFO] [1675200651.276555920] [Robot]: Action result: True
+[36marm_1          |[0m [INFO] [1675200651.267996764] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200651.278433245] [Arm]: Action: a_pick_up_sample
+[33mcoordinator_1  |[0m [INFO] [1675200651.281331104] [Coordinator]: Receiving sync message: action_complete,a_close_drawer
+[33mcoordinator_1  |[0m [INFO] [1675200651.283640888] [Coordinator]: action_complete
+[33mcoordinator_1  |[0m [INFO] [1675200651.285751175] [Coordinator]: plans_actions_current 6 of 11
+[32menvironment_1  |[0m [INFO] [1675200651.284836818] [Environment]: Receiving message: monitor
+[32menvironment_1  |[0m [INFO] [1675200651.286115701] [Environment]: Action: monitor
+[36marm_1          |[0m [INFO] [1675200651.280726673] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200651.308008546] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200651.316391250] [Robot]: Action: a_navto
+[32menvironment_1  |[0m [INFO] [1675200651.327742665] [Environment]: Receiving message: monitor
+[36;1mrobot_1        |[0m [INFO] [1675200651.328502676] [Robot]: Doing a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200651.331755611] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200651.339912559] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200651.341320822] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200651.342685819] [Arm]: Action: a_pick_up_sample
+[32menvironment_1  |[0m [INFO] [1675200651.348381138] [Environment]: Action: monitor
+[36marm_1          |[0m [INFO] [1675200651.347314798] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200651.351698934] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200651.365840816] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200651.383016872] [Arm]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200651.417407237] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200651.420349345] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200651.386039445] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200651.399088901] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200651.401614613] [Arm]: Doing a_pick_up_sample
+[32menvironment_1  |[0m [INFO] [1675200651.394276573] [Environment]: Receiving message: a_navto,robot1,Room3
+[32menvironment_1  |[0m [INFO] [1675200651.397211230] [Environment]: Action: a_navto
+[36marm_1          |[0m [INFO] [1675200651.436977468] [Arm]: not ready
+[32menvironment_1  |[0m [INFO] [1675200651.446196819] [Environment]: Responding
+[36marm_1          |[0m [INFO] [1675200651.444830923] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200651.446298337] [Arm]: Action: a_pick_up_sample
+[32menvironment_1  |[0m [INFO] [1675200651.452503594] [Environment]: Receiving message: monitor
+[36marm_1          |[0m [INFO] [1675200651.447863540] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200651.454997913] [Robot]: success
+[36;1mrobot_1        |[0m [INFO] [1675200651.458014811] [Robot]: Action result: True
+[33mcoordinator_1  |[0m [INFO] [1675200651.477536153] [Coordinator]: Receiving sync message: action_complete,a_navto
+[36;1mrobot_1        |[0m [INFO] [1675200651.475933856] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[33mcoordinator_1  |[0m [INFO] [1675200651.490696675] [Coordinator]: action_complete
+[36;1mrobot_1        |[0m [INFO] [1675200651.482679684] [Robot]: not ready
+[33mcoordinator_1  |[0m [INFO] [1675200651.505807650] [Coordinator]: plans_actions_current 7 of 11
+[36marm_1          |[0m [INFO] [1675200651.505207091] [Arm]: not ready
+[32menvironment_1  |[0m [INFO] [1675200651.505154843] [Environment]: Action: monitor
+[36marm_1          |[0m [INFO] [1675200651.513851259] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200651.516197054] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200651.518439618] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200651.517227821] [Robot]: Action: a_approach_arm
+[36;1mrobot_1        |[0m [INFO] [1675200651.518493252] [Robot]: Doing a_approach_arm
+[36;1mrobot_1        |[0m [INFO] [1675200651.521717881] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200651.528714200] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200651.541549114] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200651.550588449] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200651.564003068] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200651.566694663] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200651.582270735] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200651.585141410] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200651.590928401] [Arm]: not ready
+[32menvironment_1  |[0m [INFO] [1675200651.590596113] [Environment]: Receiving message: a_approach_arm,robot1,arm1
+[36;1mrobot_1        |[0m [INFO] [1675200651.601638679] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200651.604377902] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200651.592358504] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200651.595020548] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200651.596505392] [Arm]: Doing a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200651.614624189] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200651.625008297] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200651.636013012] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200651.637030207] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200651.642229330] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200651.645519149] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200651.656984288] [Arm]: not ready
+[32menvironment_1  |[0m [INFO] [1675200651.678288624] [Environment]: Action: a_approach_arm
+[36marm_1          |[0m [INFO] [1675200651.666394194] [Arm]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200651.684511627] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36marm_1          |[0m [INFO] [1675200651.668948685] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200651.680259607] [Arm]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200651.696346941] [Robot]: not ready
+[32menvironment_1  |[0m [INFO] [1675200651.699549757] [Environment]: Responding
+[36marm_1          |[0m [INFO] [1675200651.703271718] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200651.714911176] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200651.717078073] [Arm]: Action: a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200651.719738047] [Robot]: success
+[36;1mrobot_1        |[0m [INFO] [1675200651.736016327] [Robot]: Action result: True
+[32menvironment_1  |[0m [INFO] [1675200651.720844449] [Environment]: Receiving message: monitor
+[32menvironment_1  |[0m [INFO] [1675200651.729299932] [Environment]: Action: monitor
+[36marm_1          |[0m [INFO] [1675200651.731674645] [Arm]: Doing a_pick_up_sample
+[33mcoordinator_1  |[0m [INFO] [1675200651.761794572] [Coordinator]: Receiving sync message: action_complete,a_approach_arm
+[36;1mrobot_1        |[0m [INFO] [1675200651.763004340] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[33mcoordinator_1  |[0m [INFO] [1675200651.771346951] [Coordinator]: action_complete
+[36;1mrobot_1        |[0m [INFO] [1675200651.775139805] [Robot]: not ready
+[36marm_1          |[0m [INFO] [1675200651.789982202] [Arm]: not ready
+[36marm_1          |[0m [INFO] [1675200651.792358806] [Arm]: Action result: False
+[36marm_1          |[0m [INFO] [1675200651.794079415] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200651.795583206] [Arm]: Doing a_pick_up_sample
+[33mcoordinator_1  |[0m [INFO] [1675200651.796141692] [Coordinator]: plans_actions_current 8 of 11
+[36;1mrobot_1        |[0m [INFO] [1675200651.799212280] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[32menvironment_1  |[0m [INFO] [1675200651.809762807] [Environment]: Receiving message: monitor
+[32menvironment_1  |[0m [INFO] [1675200651.810824791] [Environment]: Action: monitor
+[36;1mrobot_1        |[0m [INFO] [1675200651.823371941] [Robot]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200651.830049986] [Robot]: Action: a_open_drawer
+[36marm_1          |[0m [INFO] [1675200651.831535078] [Arm]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200651.844952294] [Robot]: Doing a_open_drawer
+[36marm_1          |[0m [INFO] [1675200651.846232033] [Arm]: Action result: False
+[32menvironment_1  |[0m [INFO] [1675200651.850367929] [Environment]: Receiving message: monitor
+[32menvironment_1  |[0m [INFO] [1675200651.851861238] [Environment]: Action: monitor
+[36;1mrobot_1        |[0m [INFO] [1675200651.860665345] [Robot]: success
+[36marm_1          |[0m [INFO] [1675200651.849838260] [Arm]: Action: a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200651.863982484] [Robot]: Action result: True
+[33mcoordinator_1  |[0m [INFO] [1675200651.868612616] [Coordinator]: Receiving sync message: action_complete,a_open_drawer
+[33mcoordinator_1  |[0m [INFO] [1675200651.879656625] [Coordinator]: action_complete
+[36marm_1          |[0m [INFO] [1675200651.876690756] [Arm]: Doing a_pick_up_sample
+[33mcoordinator_1  |[0m [INFO] [1675200651.881306052] [Coordinator]: plans_actions_current 9 of 11
+[36;1mrobot_1        |[0m [INFO] [1675200651.884488612] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200651.886225594] [Robot]: not ready
+[32menvironment_1  |[0m [INFO] [1675200651.890112940] [Environment]: Receiving message: monitor
+[32menvironment_1  |[0m [INFO] [1675200651.891812322] [Environment]: Action: monitor
+[36;1mrobot_1        |[0m [INFO] [1675200651.911061869] [Robot]: Action: a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200651.912420500] [Robot]: Doing a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200651.917659988] [Arm]: not ready
+[36;1mrobot_1        |[0m [INFO] [1675200651.913640363] [Robot]: wating for arm1 to pick up from robot1
+[32menvironment_1  |[0m [INFO] [1675200651.924083216] [Environment]: Receiving message: monitor
+[32menvironment_1  |[0m [INFO] [1675200651.927010083] [Environment]: Action: monitor
+[36;1mrobot_1        |[0m [INFO] [1675200651.927608870] [Robot]: Action result: False
+[36marm_1          |[0m [INFO] [1675200651.933673031] [Arm]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200651.940251567] [Robot]: Action: a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200651.957486387] [Robot]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200651.958510041] [Robot]: wating for arm1 to pick up from robot1
+[36;1mrobot_1        |[0m [INFO] [1675200651.959457239] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200651.960369375] [Robot]: Action: a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200651.961203372] [Robot]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200651.962213908] [Robot]: wating for arm1 to pick up from robot1
+[36;1mrobot_1        |[0m [INFO] [1675200651.962984348] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200651.963920028] [Robot]: Action: a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200651.964682080] [Robot]: Doing a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200651.975155923] [Robot]: wating for arm1 to pick up from robot1
+[36;1mrobot_1        |[0m [INFO] [1675200651.976094622] [Robot]: Action result: False
+[36;1mrobot_1        |[0m [INFO] [1675200651.977522906] [Robot]: Action: a_pick_up_sample
+[36;1mrobot_1        |[0m [INFO] [1675200651.981377510] [Robot]: Receiving sync message. a_pick_up_sample,arm1,robot1
+[36;1mrobot_1        |[0m [INFO] [1675200651.984023079] [Robot]: Doing a_pick_up_sample
+[32menvironment_1  |[0m [INFO] [1675200651.946646652] [Environment]: Receiving message: monitor
+[32menvironment_1  |[0m [INFO] [1675200651.961527313] [Environment]: Action: monitor
+[36marm_1          |[0m [INFO] [1675200651.948299407] [Arm]: Action: a_pick_up_sample
+[36marm_1          |[0m [INFO] [1675200651.962484265] [Arm]: Doing a_pick_up_sample
+[32menvironment_1  |[0m [INFO] [1675200651.988019896] [Environment]: Receiving message: monitor
+[36;1mrobot_1        |[0m [INFO] [1675200651.997945659] [Robot]: Pick up
+[36;1mrobot_1        |[0m [INFO] [1675200652.028634145] [Robot]: Action result: True
+[32menvironment_1  |[0m [INFO] [1675200652.023922907] [Environment]: Action: monitor
+[36marm_1          |[0m [INFO] [1675200652.015061724] [Arm]: success
+[36marm_1          |[0m [INFO] [1675200652.029889294] [Arm]: Action result: True
+[32menvironment_1  |[0m [INFO] [1675200652.048744531] [Environment]: Receiving message: monitor
+[33mcoordinator_1  |[0m [INFO] [1675200652.041786657] [Coordinator]: Receiving sync message: action_complete,a_pick_up_sample
+[33mcoordinator_1  |[0m [INFO] [1675200652.043151932] [Coordinator]: action_complete
+[33mcoordinator_1  |[0m [INFO] [1675200652.044834788] [Coordinator]: plans_actions_current 10 of 11
+[36;1mrobot_1        |[0m [INFO] [1675200652.067288111] [Robot]: Action: a_close_drawer
+[36;1mrobot_1        |[0m [INFO] [1675200652.068415245] [Robot]: Doing a_close_drawer
+[36;1mrobot_1        |[0m [INFO] [1675200652.069283033] [Robot]: success
+[36;1mrobot_1        |[0m [INFO] [1675200652.070165450] [Robot]: Action result: True
+[32menvironment_1  |[0m [INFO] [1675200652.049990116] [Environment]: Action: monitor
+[33mcoordinator_1  |[0m [INFO] [1675200652.076722893] [Coordinator]: Receiving sync message: action_complete,a_close_drawer
+[33mcoordinator_1  |[0m [INFO] [1675200652.079364566] [Coordinator]: action_complete
+[33mcoordinator_1  |[0m [INFO] [1675200652.081284143] [Coordinator]: plans_actions_current 11 of 11
+[33mcoordinator_1  |[0m [INFO] [1675200652.085445479] [Coordinator]: The time of execution of above program is : 2425.4605770111084 ms
+[33mcoordinator_1  |[0m [INFO] [1675200652.086776064] [Coordinator]: Success
+[33mcoordinator_1  |[0m [INFO] [1675200652.088650976] [Coordinator]: ENDSIM
+[32menvironment_1  |[0m [INFO] [1675200652.107499523] [Environment]: Receiving message: monitor
+[32menvironment_1  |[0m [INFO] [1675200652.122890360] [Environment]: Action: monitor
+[32mplanning_environment_1 exited with code 137
+[0m[35mplanning_nurse_1 exited with code 137
+[0m[34mplanning_planner_1 exited with code 137
+[0m[36mplanning_arm_1 exited with code 137
+[0m[33mplanning_coordinator_1 exited with code 137
+[0m[36;1mplanning_robot_1 exited with code 137
+[0m

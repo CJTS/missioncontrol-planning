@@ -1,0 +1,41 @@
+version: '2'
+
+networks:
+    ros:
+
+services:
+    planner:
+        image: planner_nodes
+        networks:
+            - ros
+        command: ros2 run planner planner
+
+    coordinator:
+        image: planner_nodes
+        networks:
+            - ros
+        command: ros2 run planner coordinator True
+
+    nurse:
+        image: planner_nodes
+        networks:
+            - ros
+        command: ros2 run planner nurse
+
+    robot:
+        image: planner_nodes
+        networks:
+            - ros
+        command: ros2 run planner robot robot1
+
+    arm:
+        image: planner_nodes
+        networks:
+            - ros
+        command: ros2 run planner arm
+
+    environment:
+        image: planner_nodes
+        networks:
+            - ros
+        command: ros2 run planner environment 10
