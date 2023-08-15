@@ -1,4 +1,4 @@
-ARG FROM_IMAGE=ros:foxy
+ARG FROM_IMAGE=ros:rolling
 ARG OVERLAY_WS=/opt/ros/overlay_ws
 
 # multi-stage for caching
@@ -25,10 +25,12 @@ ARG OVERLAY_WS
 WORKDIR $OVERLAY_WS
 COPY --from=cacher /tmp/$OVERLAY_WS/src ./src
 RUN . /opt/ros/$ROS_DISTRO/setup.sh && \
-  apt-get update && rosdep install -y \
+  apt-get update && rosdep install -y -r -q --from-paths \
   --from-paths \
   src/interfaces \
   src/planner \
+  src/ros2_planning_system \
+  src/labsample_plansys2 \
   --ignore-src \
   && rm -rf /var/lib/apt/lists/*
 
@@ -37,10 +39,16 @@ COPY --from=cacher $OVERLAY_WS/src ./src
 ARG OVERLAY_MIXINS="release"
 RUN . /opt/ros/$ROS_DISTRO/setup.sh && \
   colcon build \
-  --packages-select \
-  interfaces \
-  planner \
   --mixin $OVERLAY_MIXINS
+
+# RUN . /opt/ros/$ROS_DISTRO/setup.sh && \
+#   colcon build \
+#   --packages-select \
+#   interfaces \
+#   planner \
+#   ros2_planning_system \
+#   labsample_plansys2 \
+#   --mixin $OVERLAY_MIXINS
 
 # source entrypoint setup
 ENV OVERLAY_WS $OVERLAY_WS
