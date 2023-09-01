@@ -194,4 +194,6 @@ fs.readFile('result.json', (err, data) => {
     console.log('t_70_no_replan_avg_task_time', t_70_no_replan_avg_task_time);
     console.log('t_70_no_replan_success_avg_task_time', t_70_no_replan_success_avg_task_time);
     console.log('t_70_no_replan_failed_avg_task_time', t_70_no_replan_failed_avg_task_time);
+
+    console.log('t_30_replan', t_30_replan);
 });

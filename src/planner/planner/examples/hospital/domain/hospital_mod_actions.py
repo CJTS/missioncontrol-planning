@@ -13,7 +13,7 @@ def a_navto(state, robot_, loc_):
     state.loc[robot_] = loc_
     return state
 
-# robot navigate to a location
+# robot opens to a location
 def a_open_door(state, nurse_, room_):
     state.doors[room_] = True
     return state
