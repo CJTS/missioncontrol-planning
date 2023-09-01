@@ -1,34 +1,39 @@
 networks:
   ros: {}
 services:
-  arm:
-    command: ros2 run planner arm
+  all:
+    command: ros2 launch planning.launch.py
     image: planner_nodes
     networks:
     - ros
-  coordinator:
-    command: ros2 run planner coordinator False
-    image: planner_nodes
-    networks:
-    - ros
-  environment:
-    command: ros2 run planner environment 70
-    image: planner_nodes
-    networks:
-    - ros
-  nurse:
-    command: ros2 run planner nurse
-    image: planner_nodes
-    networks:
-    - ros
-  planner:
-    command: ros2 run planner planner
-    image: planner_nodes
-    networks:
-    - ros
-  robot:
-    command: ros2 run planner robot
-    image: planner_nodes
-    networks:
-    - ros
+  # arm:
+  #   command: ros2 run planner arm
+  #   image: planner_nodes
+  #   networks:
+  #   - ros
+  # coordinator:
+  #   command: ros2 run planner coordinator True
+  #   image: planner_nodes
+  #   networks:
+  #   - ros
+  # environment:
+  #   command: ros2 run planner environment 10
+  #   image: planner_nodes
+  #   networks:
+  #   - ros
+  # nurse:
+  #   command: ros2 run planner nurse
+  #   image: planner_nodes
+  #   networks:
+  #   - ros
+  # planner:
+  #   command: ros2 run planner planner
+  #   image: planner_nodes
+  #   networks:
+  #   - ros
+  # robot:
+  #   command: ros2 run planner robot
+  #   image: planner_nodes
+  #   networks:
+  #   - ros
 version: '2.3'

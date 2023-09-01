@@ -13,3 +13,6 @@ Then you can use docker-compose to run all nodes
 To run all the tests, first you build the image and then run:
 
 ```$ python ./test.py```
+
+lima nerdctl build -t planner_nodes .
+lima nerdctl compose  -f experiment_trials.yaml up

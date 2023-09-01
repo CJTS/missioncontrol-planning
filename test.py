@@ -2,6 +2,7 @@ import yaml
 import json
 import subprocess
 import time
+import io
 
 trials = []
 
@@ -12,10 +13,11 @@ def run(opened_door, replaning, index):
         yaml.dump(get_compose_file(opened_door, replaning), file)
 
     file = open(f'./logs/%s.log' % (index), 'w')
-    up_docker_str = 'docker-compose -f experiment_trials.yaml up'
+    up_docker_str = 'lima nerdctl compose  -f experiment_trials.yaml up'
     print('Running simulation %s' % (index))
-    subprocess.Popen(up_docker_str, stdout=file, stderr=file)
+    p = subprocess.Popen([up_docker_str], stdout=file, stderr=file, shell=True, text=True, encoding='utf-8',)
     print('Monitoring simulation %s' % (index))
+    
     start = time.time()
     runtime = time.time()
     simulation_timeout_s = 5*60
@@ -33,8 +35,8 @@ def run(opened_door, replaning, index):
     trials.append(trial_result)
     print('Stopping simulation %s' % (index))
 
-    stop_docker_str = 'docker-compose -f experiment_trials.yaml down'
-    subprocess.run(stop_docker_str, stdout=file, stderr=file)
+    stop_docker_str = 'lima nerdctl compose  -f experiment_trials.yaml down'
+    subprocess.run(stop_docker_str, stdout=file, stderr=file, shell=True)
 
 
 def get_compose_file(opened_door, replaning):
@@ -111,24 +113,24 @@ def check_task_time(index):
 
 
 print('10% closed doors')
-for i in range(30):
+for i in range(5):
     run(10, True, '%s_%s_replan' % (i + 1, 10))
     run(10, False, '%s_%s_no_replan' % (i + 1, 10))
 
-print('30% closed doors')
-for i in range(30):
-    run(30, True, '%s_%s_replan' % (i + 1, 30))
-    run(30, False, '%s_%s_no_replan' % (i + 1, 30))
+# print('30% closed doors')
+# for i in range(30):
+#     run(30, True, '%s_%s_replan' % (i + 1, 30))
+#     run(30, False, '%s_%s_no_replan' % (i + 1, 30))
 
-print('50% closed doors')
-for i in range(30):
-    run(50, True, '%s_%s_replan' % (i + 1, 50))
-    run(50, False, '%s_%s_no_replan' % (i + 1, 50))
+# print('50% closed doors')
+# for i in range(30):
+#     run(50, True, '%s_%s_replan' % (i + 1, 50))
+#     run(50, False, '%s_%s_no_replan' % (i + 1, 50))
 
-print('70% closed doors')
-for i in range(30):
-    run(70, True, '%s_%s_replan' % (i + 1, 70))
-    run(70, False, '%s_%s_no_replan' % (i + 1, 70))
+# print('70% closed doors')
+# for i in range(30):
+#     run(70, True, '%s_%s_replan' % (i + 1, 70))
+#     run(70, False, '%s_%s_no_replan' % (i + 1, 70))
 
 
 with open(f'./result.json', 'w') as file:
