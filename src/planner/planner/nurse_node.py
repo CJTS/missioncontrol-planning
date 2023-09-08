@@ -2,7 +2,7 @@ from threading import Thread
 import rclpy
 from rclpy.node import Node
 from interfaces.srv import HasSample, SendPlan, Action
-from helper import action_string_to_tuple
+from planner.helper import action_string_to_tuple
 
 
 class Nurse(Node):

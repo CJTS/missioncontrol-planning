@@ -1,8 +1,19 @@
 from launch import LaunchDescription
+from launch.actions import DeclareLaunchArgument
+from launch.substitutions import EnvironmentVariable, LaunchConfiguration
 from launch_ros.actions import Node
  
 def generate_launch_description():
+    replan_launch_arg = DeclareLaunchArgument(
+        'replan', default_value=EnvironmentVariable('REPLAN')
+    )
+    problem_rate_launch_arg = DeclareLaunchArgument(
+        'problem_rate', default_value=EnvironmentVariable('PROBLEM_RATE')
+    )
+
     return LaunchDescription([
+        replan_launch_arg,
+        problem_rate_launch_arg,
         Node(
             package='planner',
             executable='arm',
@@ -12,13 +23,17 @@ def generate_launch_description():
             package='planner',
             executable='coordinator',
             name='coordinator',
-            parameters='True'
+            parameters=[{
+                'replan': LaunchConfiguration('replan'),
+            }]
         ),
         Node(
             package='planner',
             executable='environment',
-            name='environment',
-            parameters='10'
+            name=['environment'],
+            parameters=[{
+                'problem_rate': LaunchConfiguration('problem_rate'),
+            }]
         ),
         Node(
             package='planner',

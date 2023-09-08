@@ -2,10 +2,13 @@ networks:
   ros: {}
 services:
   all:
-    command: ros2 launch planning.launch.py
+    command: bash -c "cd src/planner/launch && ros2 launch planner planning.launch.py"
     image: planner_nodes
     networks:
     - ros
+    environment:
+    - REPLAN=True
+    - PROBLEM_RATE=10
   # arm:
   #   command: ros2 run planner arm
   #   image: planner_nodes

@@ -5,11 +5,11 @@ import json
 import rclpy
 from rclpy.node import Node
 from interfaces.srv import NeedPlan, HasSample, SendPlan, Action
-from helper import action_string_to_tuple, action_tuple_to_string
+from planner.helper import action_string_to_tuple, action_tuple_to_string
 
 
 class Coordinator(Node):
-    def __init__(self, should_replan):
+    def __init__(self):
         super().__init__('Coordinator')
         self.agents_client = {}
         self.robots = []
@@ -21,7 +21,10 @@ class Coordinator(Node):
         self.current_plan = []
         self.plans_actions = 0
         self.plans_actions_current = 0
-        self.should_replan = should_replan
+        self.declare_parameter('replan', rclpy.Parameter.Type.BOOL)
+        replan_param = self.get_parameter('replan').get_parameter_value().bool_value
+        print(replan_param)
+        self.should_replan = replan_param
 
     def start_server(self):
         self.get_logger().info('Starting Coordinator server')
@@ -290,7 +293,7 @@ class Coordinator(Node):
 
 def main():
     rclpy.init()
-    coordinator = Coordinator(sys.argv[1] == 'True')
+    coordinator = Coordinator()
     coordinator.start_server()
     coordinator.start_clients()
     spin_thread = Thread(target=rclpy.spin, args=(coordinator,))

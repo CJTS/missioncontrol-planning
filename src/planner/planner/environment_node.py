@@ -6,14 +6,16 @@ from interfaces.srv import Action
 import json
 import random
 
-
 class Environment(Node):
 
-    def __init__(self, closed_door_percentage):
+    def __init__(self):
         super().__init__('Environment')
         self.client_futures = []
         self.door = False
         numberList = [True, False]
+        self.declare_parameter('problem_rate', rclpy.Parameter.Type.INTEGER)
+        closed_door_percentage = self.get_parameter('problem_rate').get_parameter_value().integer_value
+        print(closed_door_percentage)
         closed_door = random.choices(numberList, weights=(
             100 - closed_door_percentage, closed_door_percentage), k=1)
 
@@ -57,7 +59,7 @@ class Environment(Node):
 
 def main():
     rclpy.init()
-    environment = Environment(int(sys.argv[1]))
+    environment = Environment()
     environment.start_server()
     spin_thread = Thread(target=rclpy.spin, args=(environment,))
     spin_thread.start()

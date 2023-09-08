@@ -2,10 +2,10 @@ from interfaces.srv import Action
 
 import rclpy
 from rclpy.node import Node
-from examples.hospital.domain.hospital_mod_methods import methods
-from examples.hospital.domain.hospital_mod_actions import actions
-from examples.hospital.problem.hospital_mod_problem import init_state
-from ipyhop import IPyHOP
+from planner.examples.hospital.domain.hospital_mod_methods import methods
+from planner.examples.hospital.domain.hospital_mod_actions import actions
+from planner.examples.hospital.problem.hospital_mod_problem import init_state
+from planner.ipyhop import IPyHOP
 
 
 class Planner(Node):

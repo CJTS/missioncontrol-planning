@@ -7,10 +7,10 @@ File Description: File used for definition of IPyHOP Class.
 from __future__ import print_function, division
 from itertools import count
 from typing import List, Tuple, Union, Optional
-from ipyhop.methods import Methods
-from ipyhop.actions import Actions
-from ipyhop.state import State
-from ipyhop.mulitgoal import MultiGoal
+from planner.ipyhop.methods import Methods
+from planner.ipyhop.actions import Actions
+from planner.ipyhop.state import State
+from planner.ipyhop.mulitgoal import MultiGoal
 from networkx import DiGraph, dfs_preorder_nodes, descendants, is_tree
 from copy import deepcopy
 

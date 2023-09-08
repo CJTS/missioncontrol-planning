@@ -5,8 +5,8 @@ File Description: File used for definition of monte-carlo plan executor
 
 # ******************************************    Libraries to be imported    ****************************************** #
 from typing import List, Union, Tuple
-from ipyhop.state import State
-from ipyhop.actions import Actions
+from planner.ipyhop.state import State
+from planner.ipyhop.actions import Actions
 import numpy as np
 
 
