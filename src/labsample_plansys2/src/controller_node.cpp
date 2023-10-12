@@ -29,18 +29,20 @@ public:
 
   void init_knowledge()
   {
-    problem_expert_->addInstance(plansys2::Instance{"robot", "robot"});
-    problem_expert_->addInstance(plansys2::Instance{"arm", "arm"});
-    problem_expert_->addInstance(plansys2::Instance{"nurse", "nurse"});
-    problem_expert_->addInstance(plansys2::Instance{"corridor", "room"});
+    problem_expert_->addInstance(plansys2::Instance{"r", "robot"});
+    problem_expert_->addInstance(plansys2::Instance{"a", "arm"});
+    problem_expert_->addInstance(plansys2::Instance{"n", "nurse"});
     problem_expert_->addInstance(plansys2::Instance{"room1", "room"});
     problem_expert_->addInstance(plansys2::Instance{"room2", "room"});
     problem_expert_->addInstance(plansys2::Instance{"room3", "room"});
 
-    problem_expert_->addPredicate(plansys2::Predicate("(nurse_at nurse room1)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(robot_at robot room2)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(arm_at arm room3)"));
-    problem_expert_->addPredicate(plansys2::Predicate("(nurse_has_sample nurse)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(nurse_at n room1)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(robot_at r room2)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(arm_at a room3)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(nurse_has_sample n)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(opened_door room1)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(opened_door room2)"));
+    problem_expert_->addPredicate(plansys2::Predicate("(opened_door room3)"));
   }
 
   void step()
@@ -50,7 +52,7 @@ public:
     case STARTING:
     {
       // Set the goal for next state
-      problem_expert_->setGoal(plansys2::Goal("(and(arm_has_sample arm))"));
+      problem_expert_->setGoal(plansys2::Goal("(and(arm_has_sample a))"));
 
       // Compute the plan
       auto domain = domain_expert_->getDomain();
@@ -86,27 +88,7 @@ public:
           std::cout << "Successful finished " << std::endl;
 
           // Cleanning up
-          problem_expert_->removePredicate(plansys2::Predicate("(and(arm_has_sample arm))"));
-
-          // Set the goal for next state
-          // problem_expert_->setGoal(plansys2::Goal("(and(patrolled wp2))"));
-
-          // Compute the plan
-          // auto domain = domain_expert_->getDomain();
-          // auto problem = problem_expert_->getProblem();
-          // auto plan = planner_client_->getPlan(domain, problem);
-
-          // if (!plan.has_value())
-          // {
-          //   std::cout << "Could not find plan to reach goal " << parser::pddl::toString(problem_expert_->getGoal()) << std::endl;
-          //   break;
-          // }
-
-          // Execute the plan
-          // if (executor_client_->start_plan_execution(plan.value()))
-          // {
-          //   state_ = PATROL_WP2;
-          // }
+          problem_expert_->removePredicate(plansys2::Predicate("(arm_has_sample a)"));
         }
         else
         {
@@ -165,7 +147,6 @@ int main(int argc, char **argv)
   while (rclcpp::ok())
   {
     node->step();
-
     rate.sleep();
     rclcpp::spin_some(node->get_node_base_interface());
   }

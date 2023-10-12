@@ -26,7 +26,7 @@
 		(nurse_has_sample ?nurse - nurse)
 		(arm_has_sample ?arm - arm)
 	)
-	(:durative-action nav_to
+	(:durative-action navto
 		:parameters (?robot - robot ?from - room ?to - room)
 		:duration( = ?duration 1)
 		:condition (and

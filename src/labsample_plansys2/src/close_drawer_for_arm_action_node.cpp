@@ -6,16 +6,16 @@
 
 using namespace std::chrono_literals;
 
-class OpenDrawer : public plansys2::ActionExecutorClient
+class CloseDrawerForArm : public plansys2::ActionExecutorClient
 {
 public:
-  OpenDrawer() : plansys2::ActionExecutorClient("open_drawer", 1s) {}
+  CloseDrawerForArm() : plansys2::ActionExecutorClient("close_drawer_for_arm", 1s) {}
 
   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn
   on_activate(const rclcpp_lifecycle::State &previous_state)
   {
     progress_ = 0.0;
-    return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::SUCCESS;
+    return ActionExecutorClient::on_activate(previous_state);
   }
 
   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn
@@ -27,14 +27,7 @@ public:
 private:
   void do_work()
   {
-    if (progress_ < 1.0)
-    {
-      progress_ += 0.1;
-    }
-    else
-    {
-      finish(true, 1.0, "Approach Arm completed");
-    }
+    finish(true, 1.0, "Close Drawer completed");
   }
 
   float progress_;
@@ -43,8 +36,8 @@ private:
 int main(int argc, char **argv)
 {
   rclcpp::init(argc, argv);
-  auto node = std::make_shared<OpenDrawer>();
-  node->set_parameter(rclcpp::Parameter("action_name", "open_drawer"));
+  auto node = std::make_shared<CloseDrawerForArm>();
+  node->set_parameter(rclcpp::Parameter("action_name", "close_drawer_for_arm"));
   node->trigger_transition(lifecycle_msgs::msg::Transition::TRANSITION_CONFIGURE);
   rclcpp::spin(node->get_node_base_interface());
   rclcpp::shutdown();

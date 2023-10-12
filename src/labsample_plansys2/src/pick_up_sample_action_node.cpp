@@ -15,7 +15,7 @@ public:
   on_activate(const rclcpp_lifecycle::State &previous_state)
   {
     progress_ = 0.0;
-    return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::SUCCESS;
+    return ActionExecutorClient::on_activate(previous_state);
   }
 
   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn
@@ -27,14 +27,7 @@ public:
 private:
   void do_work()
   {
-    if (progress_ < 1.0)
-    {
-      progress_ += 0.1;
-    }
-    else
-    {
-      finish(true, 1.0, "Approach Arm completed");
-    }
+    finish(true, 1.0, "Pick Up Sample completed");
   }
 
   float progress_;
@@ -44,7 +37,7 @@ int main(int argc, char **argv)
 {
   rclcpp::init(argc, argv);
   auto node = std::make_shared<PickUpSample>();
-  node->set_parameter(rclcpp::Parameter("action_name", "open_drawer"));
+  node->set_parameter(rclcpp::Parameter("action_name", "pick_up_sample"));
   node->trigger_transition(lifecycle_msgs::msg::Transition::TRANSITION_CONFIGURE);
   rclcpp::spin(node->get_node_base_interface());
   rclcpp::shutdown();
