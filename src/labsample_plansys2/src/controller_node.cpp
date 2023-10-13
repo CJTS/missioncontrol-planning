@@ -182,6 +182,7 @@ public:
       }
       else
       {
+        std::cout << '2' << std::endl;
         if (replan_param.as_bool())
           {
             auto domain = domain_expert_->getDomain();
