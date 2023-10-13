@@ -16,3 +16,7 @@ To run all the tests, first you build the image and then run:
 
 lima nerdctl build -t planner_nodes .
 lima nerdctl compose  -f experiment_trials.yaml up
+
+lima nerdctl compose  -f experiment_trials.yaml up plansys2
+lima nerdctl compose  -f experiment_trials.yaml up controller
+lima nerdctl compose  -f experiment_trials.yaml up popf

@@ -45,8 +45,11 @@ ament_target_dependencies(controller_node ${dependencies})
 add_executable(deposit_action_node src/deposit_action_node.cpp)
 ament_target_dependencies(deposit_action_node ${dependencies})
 
-add_executable(navto_action_node src/navto_action_node.cpp)
-ament_target_dependencies(navto_action_node ${dependencies})
+add_executable(nav_to_action_node src/nav_to_action_node.cpp)
+ament_target_dependencies(nav_to_action_node ${dependencies})
+
+add_executable(nav_to_nurse_action_node src/nav_to_nurse_action_node.cpp)
+ament_target_dependencies(nav_to_nurse_action_node ${dependencies})
 
 add_executable(open_door_action_node src/open_door_action_node.cpp)
 ament_target_dependencies(open_door_action_node ${dependencies})
@@ -70,7 +73,8 @@ install(TARGETS
   close_drawer_for_arm_action_node
   controller_node
   deposit_action_node
-  navto_action_node
+  nav_to_action_node
+  nav_to_nurse_action_node
   open_door_action_node
   open_drawer_for_nurse_action_node
   open_drawer_for_arm_action_node

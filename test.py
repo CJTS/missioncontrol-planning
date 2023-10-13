@@ -8,16 +8,24 @@ trials = []
 
 
 def run(opened_door, replaning, index):
-    compose_name = 'experiment_trials.yaml'
-    with open(f'./{compose_name}', 'w') as file:
+    compose_name = 'experiment_trials_' + index + '.yaml'
+    with open(f'./trials/{compose_name}', 'w') as file:
         yaml.dump(get_compose_file(opened_door, replaning), file)
 
     file = open(f'./logs/%s.log' % (index), 'w')
-    up_docker_str = 'lima nerdctl compose  -f experiment_trials.yaml up'
+    filePlansys2 = open(f'./logs/plansys2.log', 'w')
     print('Running simulation %s' % (index))
-    p = subprocess.Popen([up_docker_str], stdout=file, stderr=file, shell=True, text=True, encoding='utf-8',)
+    print('Starting planner %s' % (index))
+    up_docker_plansys2_str = f'lima nerdctl compose -f ./trials/{compose_name} up plansys2'
+    pPlansys2 = subprocess.Popen([up_docker_plansys2_str], stdout=filePlansys2, stderr=filePlansys2, shell=True, text=True, encoding='utf-8',)
+    while (check_planner_ready()): 
+         i = 1
+
+    print('Starting controller %s' % (index))
+    up_docker_controller_str = f'lima nerdctl compose -f ./trials/{compose_name} up controller'
+    pController = subprocess.Popen([up_docker_controller_str], stdout=file, stderr=file, shell=True, text=True, encoding='utf-8',)
+
     print('Monitoring simulation %s' % (index))
-    
     start = time.time()
     runtime = time.time()
     simulation_timeout_s = 5*60
@@ -35,43 +43,30 @@ def run(opened_door, replaning, index):
     trials.append(trial_result)
     print('Stopping simulation %s' % (index))
 
-    stop_docker_str = 'lima nerdctl compose  -f experiment_trials.yaml down'
-    subprocess.run(stop_docker_str, stdout=file, stderr=file, shell=True)
+    stop_docker_controller_str = f'lima nerdctl compose -f ./trials/{compose_name} down'
+    subprocess.run(stop_docker_controller_str, shell=True)
 
 
 def get_compose_file(opened_door, replaning):
     return {
         'version': "2.3",
         'services': {
-            'planner':  {
+            'plansys2':  {
                 'image': 'planner_nodes',
-                'command': 'ros2 run planner planner',
-                'networks': ['ros']
+                'command': 'ros2 launch labsample_plansys2 planning.launch.py',
+                'networks': ['ros'],
+                'environment': ['REPLAN=' + str(replaning), 'PROBLEM_RATE=' + str(opened_door)]
             },
-            'coordinator':  {
+            'controller':  {
                 'image': 'planner_nodes',
-                'command': 'ros2 run planner coordinator %s' % (replaning),
-                'networks': ['ros']
+                'command': 'ros2 run labsample_plansys2 controller_node --ros-args -p "replan:=%s" -p problem_rate:=%s' % (replaning, opened_door),
+                'networks': ['ros'],
             },
-            'robot':  {
+            'all':  {
                 'image': 'planner_nodes',
-                'command': 'ros2 run planner robot',
-                'networks': ['ros']
-            },
-            'arm':  {
-                'image': 'planner_nodes',
-                'command': 'ros2 run planner arm',
-                'networks': ['ros']
-            },
-            'nurse':  {
-                'image': 'planner_nodes',
-                'command': 'ros2 run planner nurse',
-                'networks': ['ros']
-            },
-            'environment':  {
-                'image': 'planner_nodes',
-                'command': 'ros2 run planner environment %s' % (opened_door),
-                'networks': ['ros']
+                'command': 'bash -c "cd src/planner/launch && ros2 launch planner planning.launch.py"',
+                'networks': ['ros'],
+                'environment': ['REPLAN=' + str(replaning), 'PROBLEM_RATE=' + str(opened_door)]
             },
         },
         'networks': {
@@ -90,6 +85,15 @@ def check_end_simulation(index):
                 return True
     return False
 
+def check_planner_ready():
+    with open(f'./logs/plansys2.log', 'r') as file:
+        lines = file.readlines()
+        alllines = ''
+        for line in lines:
+            alllines = alllines+line
+            if "[executor_lc_mngr]: Node executor_lc_mngr has current state active." in line:
+                return False
+    return True
 
 def check_simulation_status(index):
     with open(f'./logs/%s.log' % (index), 'r') as file:
@@ -97,7 +101,7 @@ def check_simulation_status(index):
         alllines = ''
         for line in lines:
             alllines = alllines+line
-            if "Achieved" in line:
+            if "Achieved" in line or "Successful finished" in line:
                 return 'Success'
     return 'Failed'
 
@@ -108,14 +112,14 @@ def check_task_time(index):
         for line in lines:
             alllines = alllines+line
             if "The time of execution of above program is" in line:
-                return float(line.split(':')[2])
+                print(line.split(':'))
+                return float(line.split(':')[1])
     return False
-
 
 print('10% closed doors')
 for i in range(5):
-    run(10, True, '%s_%s_replan' % (i + 1, 10))
-    run(10, False, '%s_%s_no_replan' % (i + 1, 10))
+    run(100, True, '%s_%s_replan' % (i + 1, 100))
+    run(100, False, '%s_%s_no_replan' % (i + 1, 100))
 
 # print('30% closed doors')
 # for i in range(30):

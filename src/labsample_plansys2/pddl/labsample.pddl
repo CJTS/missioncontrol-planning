@@ -4,9 +4,7 @@
 	(:types
 		robot arm nurse room sample - object
 	)
-	(:functions
-
-	)
+	
 	(:predicates
 		(opened_door ?room - room)
 
@@ -26,6 +24,7 @@
 		(nurse_has_sample ?nurse - nurse)
 		(arm_has_sample ?arm - arm)
 	)
+
 	(:durative-action nav_to
 		:parameters (?robot - robot ?from - room ?to - room)
 		:duration( = ?duration 1)
@@ -36,7 +35,7 @@
 		)
 		:effect (and
 			(at start(not (robot_at ?robot ?from)))
-			(at start(robot_at ?robot ?to))
+			(at end(robot_at ?robot ?to))
 		)
 	)
 	(:durative-action open_door
@@ -55,8 +54,8 @@
 			(at start(nurse_at ?nurse ?room))
 		)
 		:effect (and
-			(at start(robot_near_nurse ?robot ?nurse))
-			(at start(robot_opening_drawer ?robot))
+			(at end(robot_near_nurse ?robot ?nurse))
+			(at end(robot_opening_drawer ?robot))
 		)
 	)
 	(:durative-action authenticate_nurse
@@ -67,7 +66,7 @@
 			(at start(nurse_at ?nurse ?room))
 			(at start(robot_near_nurse ?robot ?nurse))
 		)
-		:effect (at start(nurse_auth_robot ?robot ?nurse))
+		:effect (at end(nurse_auth_robot ?robot ?nurse))
 	)
 	(:durative-action open_drawer_for_nurse
 		:parameters (?robot - robot ?nurse - nurse)
@@ -76,7 +75,7 @@
 			(at start(nurse_auth_robot ?robot ?nurse))
 		)
 		:effect (and
-			(at start(robot_drawer ?robot))
+			(at end(robot_drawer ?robot))
 		)
 	)
 	(:durative-action open_drawer_for_arm
@@ -86,7 +85,7 @@
 			(at start(robot_near_arm ?robot ?arm))
 		)
 		:effect (and
-			(at start(robot_drawer ?robot))
+			(at end(robot_drawer ?robot))
 		)
 	)
 	(:durative-action close_drawer_for_nurse
@@ -97,10 +96,10 @@
 			(at start(robot_drawer ?robot))
 		)
 		:effect (and
-			(at start(not (robot_drawer ?robot)))
-			(at start(not (robot_near_nurse ?robot ?nurse)))
-			(at start(not (nurse_auth_robot ?robot ?nurse)))
-			(at start(not (robot_opening_drawer ?robot)))
+			(at end(not (robot_drawer ?robot)))
+			(at end(not (robot_near_nurse ?robot ?nurse)))
+			(at end(not (nurse_auth_robot ?robot ?nurse)))
+			(at end(not (robot_opening_drawer ?robot)))
 		)
 	)
 	(:durative-action close_drawer_for_arm
@@ -111,9 +110,9 @@
 			(at start(robot_drawer ?robot))
 		)
 		:effect (and
-			(at start(not (robot_drawer ?robot)))
-			(at start(not (robot_near_arm ?robot ?arm)))
-			(at start(not (robot_opening_drawer ?robot)))
+			(at end(not (robot_drawer ?robot)))
+			(at end(not (robot_near_arm ?robot ?arm)))
+			(at end(not (robot_opening_drawer ?robot)))
 		)
 	)
 	(:durative-action deposit
@@ -127,8 +126,8 @@
 			(at start(nurse_auth_robot ?robot ?nurse))
 		)
 		:effect (and
-			(at start(robot_has_sample ?robot))
-			(at start(not (nurse_has_sample ?nurse)))
+			(at end(robot_has_sample ?robot))
+			(at end(not (nurse_has_sample ?nurse)))
 		)
 	)
 	(:durative-action approach_arm
@@ -139,8 +138,8 @@
 			(at start(arm_at ?arm ?room))
 		)
 		:effect (and
-			(at start(robot_near_arm ?robot ?arm))
-			(at start(robot_opening_drawer ?robot))
+			(at end(robot_near_arm ?robot ?arm))
+			(at end(robot_opening_drawer ?robot))
 		)
 	)
 	(:durative-action pick_up_sample
@@ -154,10 +153,10 @@
 			(at start(robot_near_arm ?robot ?arm))
 		)
 		:effect (and
-			(at start(arm_has_sample ?arm))
-			(at start(not (robot_has_sample ?robot)))
-			(at start(not (robot_near_arm ?robot ?arm)))
-			(at start(not (robot_opening_drawer ?robot)))
+			(at end(arm_has_sample ?arm))
+			(at end(not (robot_has_sample ?robot)))
+			(at end(not (robot_near_arm ?robot ?arm)))
+			(at end(not (robot_opening_drawer ?robot)))
 		)
 	)
 )

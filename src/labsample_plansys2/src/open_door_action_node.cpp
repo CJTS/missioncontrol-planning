@@ -9,7 +9,7 @@ using namespace std::chrono_literals;
 class OpenDoor : public plansys2::ActionExecutorClient
 {
 public:
-  OpenDoor() : plansys2::ActionExecutorClient("open_door", 1s) {}
+  OpenDoor() : plansys2::ActionExecutorClient("open_door", 0s) {}
 
   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn
   on_activate(const rclcpp_lifecycle::State &previous_state)

@@ -4,9 +4,7 @@
 	(:types
 		robot arm nurse room sample - object
 	)
-	(:functions
-
-	)
+	
 	(:predicates
 		(opened_door ?room - room)
 
@@ -26,7 +24,8 @@
 		(nurse_has_sample ?nurse - nurse)
 		(arm_has_sample ?arm - arm)
 	)
-	(:durative-action navto
+
+	(:durative-action nav_to
 		:parameters (?robot - robot ?from - room ?to - room)
 		:duration( = ?duration 1)
 		:condition (and
@@ -37,6 +36,17 @@
 		:effect (and
 			(at start(not (robot_at ?robot ?from)))
 			(at start(robot_at ?robot ?to))
+		)
+	)
+	(:durative-action nav_to_nurse
+		:parameters (?nurse - nurse ?from - room ?to - room)
+		:duration( = ?duration 1)
+		:condition (and
+			(at start(nurse_at ?nurse ?from))
+		)
+		:effect (and
+			(at start(not (nurse_at ?nurse ?from)))
+			(at start(nurse_at ?nurse ?to))
 		)
 	)
 	(:durative-action open_door

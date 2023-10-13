@@ -9,7 +9,7 @@ using namespace std::chrono_literals;
 class Deposit : public plansys2::ActionExecutorClient
 {
 public:
-  Deposit() : plansys2::ActionExecutorClient("deposit", 1s) {}
+  Deposit() : plansys2::ActionExecutorClient("deposit", 0s) {}
 
   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn
   on_activate(const rclcpp_lifecycle::State &previous_state)

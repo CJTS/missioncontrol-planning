@@ -9,7 +9,7 @@ using namespace std::chrono_literals;
 class AuthenticateNurse : public plansys2::ActionExecutorClient
 {
 public:
-  AuthenticateNurse() : plansys2::ActionExecutorClient("authenticate_nurse", 1s) {}
+  AuthenticateNurse() : plansys2::ActionExecutorClient("authenticate_nurse", 0s) {}
 
   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn
   on_activate(const rclcpp_lifecycle::State &previous_state)

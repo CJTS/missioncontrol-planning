@@ -9,7 +9,7 @@ using namespace std::chrono_literals;
 class PickUpSample : public plansys2::ActionExecutorClient
 {
 public:
-  PickUpSample() : plansys2::ActionExecutorClient("pick_up_sample", 1s) {}
+  PickUpSample() : plansys2::ActionExecutorClient("pick_up_sample", 0s) {}
 
   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn
   on_activate(const rclcpp_lifecycle::State &previous_state)

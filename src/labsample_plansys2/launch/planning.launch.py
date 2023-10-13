@@ -70,10 +70,17 @@ def generate_launch_description():
         output='screen',
         parameters=[])
 
-    navto_cmd = Node(
+    nav_to_cmd = Node(
         package='labsample_plansys2',
-        executable='navto_action_node',
-        name='navto_action_node',
+        executable='nav_to_action_node',
+        name='nav_to_action_node',
+        output='screen',
+        parameters=[])
+
+    nav_to_nurse_cmd = Node(
+        package='labsample_plansys2',
+        executable='nav_to_nurse_action_node',
+        name='nav_to_nurse_action_node',
         output='screen',
         parameters=[])
 
@@ -116,7 +123,8 @@ def generate_launch_description():
     ld.add_action(close_drawer_for_nurse_cmd)
     ld.add_action(close_drawer_for_arm_cmd)
     ld.add_action(deposit_cmd)
-    ld.add_action(navto_cmd)
+    ld.add_action(nav_to_cmd)
+    ld.add_action(nav_to_nurse_cmd)
     ld.add_action(open_door_cmd)
     ld.add_action(open_drawer_for_nurse_cmd)
     ld.add_action(open_drawer_for_arm_cmd)

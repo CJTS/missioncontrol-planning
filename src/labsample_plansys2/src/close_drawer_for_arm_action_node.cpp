@@ -9,7 +9,7 @@ using namespace std::chrono_literals;
 class CloseDrawerForArm : public plansys2::ActionExecutorClient
 {
 public:
-  CloseDrawerForArm() : plansys2::ActionExecutorClient("close_drawer_for_arm", 1s) {}
+  CloseDrawerForArm() : plansys2::ActionExecutorClient("close_drawer_for_arm", 0s) {}
 
   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn
   on_activate(const rclcpp_lifecycle::State &previous_state)

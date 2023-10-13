@@ -9,7 +9,7 @@ using namespace std::chrono_literals;
 class ApproachArm : public plansys2::ActionExecutorClient
 {
 public:
-  ApproachArm() : plansys2::ActionExecutorClient("approach_arm", 1s) {}
+  ApproachArm() : plansys2::ActionExecutorClient("approach_arm", 0s) {}
 
   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn
   on_activate(const rclcpp_lifecycle::State &previous_state)
