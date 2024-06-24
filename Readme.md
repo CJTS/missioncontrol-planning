@@ -13,10 +13,18 @@ Then you can use docker-compose to run all nodes
 To run all the tests, first you build the image and then run:
 
 ```$ python ./test.py```
+lima docker compose  -f experiment_trials.yaml up
+s
+lima docker build -t planner_nodes .
+lima docker stop $(lima docker ps -a -q)
+lima docker rm $(lima docker ps -a -q)
+lima docker compose  -f experiment_trials.yaml up plansys2
+lima docker compose  -f experiment_trials.yaml up controller
+lima docker compose  -f experiment_trials.yaml up popf
+lima docker compose  -f experiment_trials.yaml up patrol
+lima docker compose  -f experiment_trials.yaml up patrolController
+lima docker compose  -f experiment_trials.yaml up ipyhop-patrol
+lima docker compose  -f experiment_trials.yaml up all-patrol
+lima docker compose  -f experiment_trials.yaml up all
 
-lima nerdctl build -t planner_nodes .
-lima nerdctl compose  -f experiment_trials.yaml up
-
-lima nerdctl compose  -f experiment_trials.yaml up plansys2
-lima nerdctl compose  -f experiment_trials.yaml up controller
-lima nerdctl compose  -f experiment_trials.yaml up popf
+python3 test.py

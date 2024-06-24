@@ -1,0 +1,47 @@
+networks:
+  ros: {}
+services:
+  all:
+    command: bash -c "cd src/murosa_plan_health/launch && ros2 launch murosa_plan_health
+      planning.launch.py"
+    environment:
+    - REPLAN=False
+    - PROBLEM_RATE=70
+    image: planner_nodes
+    networks:
+    - ros
+  all-patrol:
+    command: bash -c "cd src/murosa_plan_patrol/launch && ros2 launch murosa_plan_patrol
+      planning.launch.py"
+    environment:
+    - REPLAN=False
+    - PROBLEM_RATE=70
+    image: planner_nodes
+    networks:
+    - ros
+  controller:
+    command: ros2 run plansys2_labsample controller_node
+    image: planner_nodes
+    networks:
+    - ros
+  patrol:
+    command: ros2 launch plansys2_patrol_navigation_example patrol_example_fakesim_launch.py
+    image: planner_nodes
+    networks:
+    - ros
+  patrolController:
+    command: ros2 run plansys2_patrol_navigation_example patrolling_controller_node
+    environment:
+    - REPLAN=False
+    - PROBLEM_RATE=70
+    image: planner_nodes
+    networks:
+    - ros
+  plansys2:
+    command: ros2 launch plansys2_labsample planning.launch.py
+    environment:
+    - PROBLEM_RATE=70
+    image: planner_nodes
+    networks:
+    - ros
+version: '2.3'

@@ -46,8 +46,10 @@ RUN . /opt/ros/$ROS_DISTRO/setup.sh && \
   colcon build \
   --packages-select \
   interfaces \
-  planner \
-  labsample_plansys2 \
+  murosa_plan_health \
+  murosa_plan_patrol \
+  plansys2_labsample \
+  plansys2_bt_example \
   plansys2_patrol_navigation_example \
   --symlink-install \
   --mixin $OVERLAY_MIXINS
@@ -60,6 +62,6 @@ RUN sed --in-place --expression \
 
 RUN apt-get update && \
   apt-get install -y python3 python3-pip
-RUN pip3 install -r ./src/planner/requirements.txt
+RUN pip3 install -r ./src/murosa_plan_health/requirements.txt
 
-ENV PYTHONPATH "${PYTHONPATH}:./src/planner/planner"
+ENV PYTHONPATH "${PYTHONPATH}:./src/murosa_plan_health/murosa_plan_health"

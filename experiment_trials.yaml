@@ -2,7 +2,15 @@ networks:
   ros: {}
 services:
   all:
-    command: bash -c "cd src/planner/launch && ros2 launch planner planning.launch.py"
+    command: bash -c "cd src/murosa_plan_health/launch && ros2 launch murosa_plan_health planning.launch.py"
+    environment:
+    - REPLAN=False
+    - PROBLEM_RATE=10
+    image: planner_nodes
+    networks:
+    - ros
+  all-patrol:
+    command: bash -c "cd src/murosa_plan_patrol/launch && ros2 launch murosa_plan_patrol planning.launch.py"
     environment:
     - REPLAN=False
     - PROBLEM_RATE=10
@@ -10,12 +18,12 @@ services:
     networks:
     - ros
   controller:
-    command: ros2 run labsample_plansys2 controller_node --ros-args -p "replan:=False" -p problem_rate:=10
+    command: ros2 run plansys2_labsample controller_node --ros-args -p "replan:=False" -p problem_rate:=10
     image: planner_nodes
     networks:
     - ros
   plansys2:
-    command: ros2 launch labsample_plansys2 planning.launch.py
+    command: ros2 launch plansys2_labsample planning.launch.py
     environment:
     - REPLAN=False
     - PROBLEM_RATE=10
@@ -27,4 +35,17 @@ services:
     image: planner_nodes
     networks:
     - ros
+  patrol:
+    command: ros2 launch plansys2_patrol_navigation_example patrol_example_fakesim_launch.py
+    image: planner_nodes
+    networks:
+    - ros
+  patrolController:
+    command: ros2 run plansys2_patrol_navigation_example patrolling_controller_node
+    image: planner_nodes
+    networks:
+    - ros
+  ipyhop-patrol:
+    command: python3 src/murosa_plan_patrol/murosa_plan_patrol/planner.py
+    image: planner_nodes
 version: '2.3'

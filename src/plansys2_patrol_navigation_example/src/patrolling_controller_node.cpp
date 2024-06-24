@@ -15,6 +15,7 @@
 #include <plansys2_pddl_parser/Utils.h>
 
 #include <memory>
+#include <chrono>
 
 #include "plansys2_msgs/msg/action_execution_info.hpp"
 #include "plansys2_msgs/msg/plan.hpp"
@@ -26,6 +27,9 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "rclcpp_action/rclcpp_action.hpp"
+
+using namespace std;
+using namespace chrono;
 
 class PatrollingController : public rclcpp::Node
 {
@@ -84,6 +88,7 @@ public:
           }
 
           // Execute the plan
+          beg = high_resolution_clock::now();
           if (executor_client_->start_plan_execution(plan.value())) {
             state_ = PATROL_WP1;
           }
@@ -101,8 +106,6 @@ public:
 
           if (!executor_client_->execute_and_check_plan() && executor_client_->getResult()) {
             if (executor_client_->getResult().value().success) {
-              std::cout << "Successful finished " << std::endl;
-
               // Cleanning up
               problem_expert_->removePredicate(plansys2::Predicate("(patrolled wp1)"));
 
@@ -161,8 +164,6 @@ public:
 
           if (!executor_client_->execute_and_check_plan() && executor_client_->getResult()) {
             if (executor_client_->getResult().value().success) {
-              std::cout << "Successful finished " << std::endl;
-
               // Cleanning up
               problem_expert_->removePredicate(plansys2::Predicate("(patrolled wp2)"));
 
@@ -221,8 +222,6 @@ public:
 
           if (!executor_client_->execute_and_check_plan() && executor_client_->getResult()) {
             if (executor_client_->getResult().value().success) {
-              std::cout << "Successful finished " << std::endl;
-
               // Cleanning up
               problem_expert_->removePredicate(plansys2::Predicate("(patrolled wp3)"));
 
@@ -282,29 +281,16 @@ public:
           if (!executor_client_->execute_and_check_plan() && executor_client_->getResult()) {
             if (executor_client_->getResult().value().success) {
               std::cout << "Successful finished " << std::endl;
+              auto end = high_resolution_clock::now();
+              chrono::duration<double> elapsed_seconds = end - beg;
+              auto duration = duration_cast<seconds>(elapsed_seconds);
+              std::cout << "The time of execution of above program is:" << duration.count() << std::endl;
+              std::cout << "ENDSIM" << std::endl;
 
               // Cleanning up
-              problem_expert_->removePredicate(plansys2::Predicate("(patrolled wp4)"));
-
-              // Set the goal for next state
-              problem_expert_->setGoal(plansys2::Goal("(and(patrolled wp1))"));
-
-              // Compute the plan
-              auto domain = domain_expert_->getDomain();
-              auto problem = problem_expert_->getProblem();
-              auto plan = planner_client_->getPlan(domain, problem);
-
-              if (!plan.has_value()) {
-                std::cout << "Could not find plan to reach goal " <<
-                  parser::pddl::toString(problem_expert_->getGoal()) << std::endl;
-                break;
-              }
-
-              // Execute the plan
-              if (executor_client_->start_plan_execution(plan.value())) {
-                // Loop to WP1
-                state_ = PATROL_WP1;
-              }
+              problem_expert_->removePredicate(plansys2::Predicate("(arm_has_sample a)"));
+              problem_expert_->clearGoal();
+              problem_expert_->clearKnowledge();
             } else {
               for (const auto & action_feedback : feedback.action_execution_status) {
                 if (action_feedback.status == plansys2_msgs::msg::ActionExecutionInfo::FAILED) {
@@ -343,6 +329,7 @@ private:
   std::shared_ptr<plansys2::PlannerClient> planner_client_;
   std::shared_ptr<plansys2::ProblemExpertClient> problem_expert_;
   std::shared_ptr<plansys2::ExecutorClient> executor_client_;
+  std::chrono::time_point<std::chrono::high_resolution_clock> beg;
 };
 
 int main(int argc, char ** argv)
